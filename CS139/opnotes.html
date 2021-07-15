@@ -1,0 +1,3426 @@
+<!DOCTYPE html>
+<html lang=" en-US">
+
+<head>
+
+    
+    <meta charset="UTF-8"><script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- Include tocNAV javascript -->
+    <script type="text/javascript" src="/assets/js/tocNav.js"></script>
+
+    <!-- seo used to be here -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style"
+        type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>CS139 One Page Notes</title>
+</head>
+
+<body>
+    <div id="mainGrid" class="container">
+        <header style="padding:10px;" class="page-header notes-header" role="banner">
+            <h1 class="project-name">CS139 One Page Notes</h1>
+        </header>
+        <div title="Table of Contents" class="buttonCol" onclick="toggleNav()">
+            <div class="navArrow">
+                <i></i>
+            </div>
+        </div>
+        <div class="navBox">
+            <div id="sidenav" class="sideNav closedNav">
+                <h2 style="margin-left: 10px;">Table of Contents</h2><ul class="table-of-contents"><li><a href="#html">HTML</a></li><li><a href="#introduction">Introduction</a></li><li><a href="#html-nesting-structure">HTML Nesting Structure</a><ul><li><a href="#parent">Parent</a></li><li><a href="#child">Child</a></li><li><a href="#ancestor">Ancestor</a></li><li><a href="#descendant">Descendant</a></li><li><a href="#sibling">Sibling</a></li></ul></li><li><a href="#document-object-model">Document Object Model</a></li><li><a href="#basic-syntax">Basic Syntax</a><ul><li><a href="#empty-tags">Empty Tags</a></li></ul></li><li><a href="#html-nesting">HTML Nesting</a></li><li><a href="#character-entities">Character Entities</a></li><li><a href="#block-vs-inline">Block vs Inline</a></li><li><a href="#validation">Validation</a></li><li><a href="#common-tags">Common Tags</a><ul><li><a href="#doctypes-r">Doctypes (R)</a></li><li><a href="#html-r">HTML (R)</a></li><li><a href="#head-r">Head (R)</a></li><li><a href="#title">Title</a></li><li><a href="#meta--text-encoding">Meta / Text encoding</a></li><li><a href="#body-r">Body (R)</a></li><li><a href="#headings">Headings</a></li><li><a href="#a-links">A (Links)</a></li><li><a href="#img-image">Img (Image)</a></li><li><a href="#strong">Strong</a></li><li><a href="#p">P</a></li><li><a href="#div-division">Div (Division)</a></li><li><a href="#abbr-abbreviation">Abbr (Abbreviation)</a></li><li><a href="#br-break">Br break</a></li><li><a href="#code">Code</a></li><li><a href="#em-emphasis">Em (emphasis)</a></li><li><a href="#mark">Mark</a></li><li><a href="#small">Small</a></li><li><a href="#span">Span</a></li><li><a href="#lists">Lists</a></li></ul></li><li><a href="#tables">Tables</a><ul><li><a href="#modifying-tables">Modifying tables</a><ul><li><a href="#table-header">table header</a></li><li><a href="#table-footer">table footer</a></li><li><a href="#caption">caption</a></li><li><a href="#rowspan">rowspan</a></li><li><a href="#column-span">column span</a></li></ul></li></ul></li><li><a href="#html-forms">HTML Forms</a><ul><li><a href="#form-elements">Form Elements</a><ul><li><a href="#input">Input</a><ul><li><a href="#other-attributes">Other Attributes</a></li></ul></li><li><a href="#select">Select</a></li></ul></li><li><a href="#accessibility">Accessibility</a></li></ul></li><li><a href="#css">CSS</a></li><li><a href="#introduction">Introduction</a></li><li><a href="#placement-of-styles">Placement of Styles</a><ul><li><a href="#inside-respective-tags">Inside Respective Tags</a></li><li><a href="#in-a-style-tag">In a Style Tag</a></li><li><a href="#in-a-separate-file">In a Separate File</a></li></ul></li><li><a href="#types-of-stylesheet">Types of Stylesheet</a></li><li><a href="#syntax">Syntax</a></li><li><a href="#box-model">Box Model</a></li><li><a href="#positioning">Positioning</a></li><li><a href="#selectors">Selectors</a><ul><li><a href="#using-the-tag-name">Using the Tag Name</a></li><li><a href="#using-a-class-selector">Using a Class Selector</a></li><li><a href="#using-an-id">Using an Id</a></li><li><a href="#attribute-selectors">Attribute Selectors</a></li><li><a href="#pseudo-selectors">Pseudo Selectors</a></li><li><a href="#contextual-selectors">Contextual Selectors</a></li></ul></li><li><a href="#properties">Properties</a></li><li><a href="#table-styling">Table Styling</a><ul><li><a href="#table-borders">Table Borders</a></li><li><a href="#text-alignment">Text Alignment</a></li><li><a href="#styling">Styling</a></li></ul></li><li><a href="#php">PHP</a></li><li><a href="#introductions">Introductions</a></li><li><a href="#basic">Basic</a><ul><li><a href="#simple-commands">Simple Commands</a><ul><li><a href="#print-f">print f</a></li><li><a href="#null-coalescing-operator">NUll Coalescing Operator</a></li></ul></li></ul></li><li><a href="#variables">Variables</a><ul><li><a href="#constants">constants</a></li></ul></li><li><a href="#data-types">Data Types</a><ul><li><a href="#strings">Strings</a></li><li><a href="#arrays">Arrays</a><ul><li><a href="#numeric-array">Numeric Array</a></li><li><a href="#associative-array">Associative Array</a></li></ul></li></ul></li><li><a href="#operators">Operators</a><ul><li><a href="#arithmetic-operators">Arithmetic Operators</a></li><li><a href="#comparison-operators">Comparison Operators</a></li><li><a href="#logical-operators">Logical Operators</a></li><li><a href="#array-operators">Array Operators</a></li></ul></li><li><a href="#branching">Branching</a><ul><li><a href="#if">If</a></li><li><a href="#switch">Switch</a></li></ul></li><li><a href="#looping">Looping</a><ul><li><a href="#for-loop">For loop</a></li><li><a href="#while-loop">While Loop</a></li><li><a href="#do-while-loop">do while loop</a></li><li><a href="#array-iteration">Array Iteration</a></li></ul></li><li><a href="#function">Function</a><ul><li><a href="#pass-by-reference">Pass by Reference</a></li><li><a href="#global">Global</a></li></ul></li><li><a href="#html-forms">HTML Forms</a></li><li><a href="#php-from-another-file">PHP From Another File</a></li><li><a href="#objects-and-classes">Objects and Classes</a><ul><li><a href="#call-methods">Call Methods</a></li><li><a href="#constructor">Constructor</a></li><li><a href="#access-modifier">Access Modifier</a></li><li><a href="#inheritance">Inheritance</a></li></ul></li><li><a href="#cookies">Cookies</a></li><li><a href="#sessions">Sessions</a></li><li><a href="#password-hashing">Password Hashing</a></li><li><a href="#login-verification">Login Verification</a></li><li><a href="#sql">SQL</a></li><li><a href="#serialization">Serialization</a></li><li><a href="#reading-and-writing-files">Reading and Writing Files</a><ul><li><a href="#stream-access">Stream Access</a></li><li><a href="#in-memory-access">In-memory Access</a></li></ul></li><li><a href="#errors">Errors</a><ul><li><a href="#reporting">Reporting</a></li></ul></li><li><a href="#superglobals">Superglobals</a></li><li><a href="#javascript">JavaScript</a></li><li><a href="#introduction">Introduction</a></li><li><a href="#basic">Basic</a><ul><li><a href="#commands">Commands</a></li><li><a href="#variables">Variables</a></li><li><a href="#datatypes">DataTypes</a></li><li><a href="#arrays">Arrays</a><ul><li><a href="#common-methods">Common Methods</a></li></ul></li><li><a href="#functions">Functions</a></li></ul></li><li><a href="#control-flow">Control Flow</a><ul><li><a href="#if">IF</a></li><li><a href="#switch">Switch</a></li><li><a href="#for-loop">For Loop</a></li><li><a href="#while-loop">While Loop</a></li></ul></li><li><a href="#objects">Objects</a><ul><li><a href="#constructor-function">Constructor Function</a></li><li><a href="#classes">Classes</a></li></ul></li><li><a href="#navigating-the-dom">Navigating the DOM</a></li><li><a href="#event-handling">Event Handling</a><ul><li><a href="#forms">Forms</a></li></ul></li><li><a href="#jquery">jQuery</a><ul><li><a href="#starting-scripts">Starting Scripts</a></li><li><a href="#magical-objects">Magical Objects</a><ul><li><a href="#many-items">Many Items</a></li></ul></li><li><a href="#methods">Methods</a></li><li><a href="#jquery-events">JQuery Events</a><ul><li><a href="#event-binding">Event Binding</a></li></ul></li><li><a href="#event-bubbling">Event Bubbling</a></li></ul></li><li><a href="#animation">Animation</a></li><li><a href="#ajax">AJAX</a><ul><li><a href="#steps">Steps</a></li><li><a href="#implementations">Implementations</a></li><li><a href="#jquery-and-ajax">JQuery and AJAX</a></li></ul></li><li><a href="#sql">SQL</a></li><li><a href="#key-commands">Key Commands</a></li><li><a href="#database-theory">Database Theory</a><ul><li><a href="#sql">SQL</a></li><li><a href="#relational-database">Relational Database</a></li><li><a href="#database-management">Database Management</a></li><li><a href="#nosql">NoSQL</a></li><li><a href="#acid-compliance">ACID Compliance</a></li><li><a href="#database-table">Database Table</a></li><li><a href="#links">Links</a><ul><li><a href="#one-to-one">One to One</a></li><li><a href="#one-to-many">One to Many</a></li><li><a href="#many-to-many">Many to Many</a></li></ul></li><li><a href="#identifiers">Identifiers</a></li><li><a href="#schema">Schema</a></li></ul></li><li><a href="#detailed-commands">Detailed Commands</a><ul><li><a href="#data-types">Data Types</a><ul><li><a href="#data-modifiers">Data Modifiers</a><ul><li><a href="#auto-increment">Auto increment</a></li></ul></li></ul></li><li><a href="#table-operations">Table Operations</a><ul><li><a href="#create-table">Create Table</a></li><li><a href="#delete-table">Delete Table</a></li></ul></li><li><a href="#add-data">Add Data</a></li><li><a href="#updating-records">Updating Records</a></li><li><a href="#deleting-records">Deleting Records</a></li><li><a href="#find-data">Find Data</a></li></ul></li><li><a href="#history-of-the-internet">History of the Internet</a></li><li><a href="#history-of-the-internet">History of the Internet</a><ul><li><a href="#telephone-and-circuit-switching">Telephone and Circuit Switching</a></li><li><a href="#packet-network">Packet Network</a></li><li><a href="#internet-vs-world-wide-web">Internet vs World Wide Web</a></li></ul></li><li><a href="#early-web">Early Web</a><ul><li><a href="#pre-1995">pre 1995</a></li></ul></li><li><a href="#web-vs-desktop-applications">Web vs Desktop Applications</a><ul><li><a href="#web-advantages">Web advantages</a></li><li><a href="#web-disadvantages">Web disadvantages</a></li></ul></li><li><a href="#web-servers">Web Servers</a></li><li><a href="#static-websites-vs-dynamic-websites">Static Websites vs Dynamic Websites</a><ul><li><a href="#static-websites">Static Websites</a></li><li><a href="#dynamic-websites">Dynamic Websites</a></li></ul></li><li><a href="#client-server-model">Client Server Model</a><ul><li><a href="#client-server-model-1">Client Server Model</a></li><li><a href="#peer-to-peer">Peer to Peer</a></li></ul></li><li><a href="#data-centers">Data Centers</a><ul><li><a href="#servers">Servers</a></li><li><a href="#support-hardware">Support Hardware</a></li><li><a href="#data-duplication">Data Duplication</a></li></ul></li><li><a href="#the-internet">The Internet</a><ul><li><a href="#communication">Communication</a></li><li><a href="#data-locality">Data Locality</a></li><li><a href="#packets">Packets</a></li><li><a href="#routing">Routing</a></li></ul></li><li><a href="#mobile-web-applications">Mobile Web applications</a></li><li><a href="#get-and-post">GET and POST</a></li><li><a href="#get">GET</a><ul><li><a href="#response">Response</a></li></ul></li><li><a href="#post">POST</a></li><li><a href="#web-protocols">Web Protocols</a></li><li><a href="#protocols">Protocols</a></li><li><a href="#network-layers">Network Layers</a><ul><li><a href="#application-layer">Application Layer</a><ul><li><a href="#http">HTTP</a></li></ul></li><li><a href="#transport-layer">Transport Layer</a></li><li><a href="#internet-layer">Internet Layer</a><ul><li><a href="#ipv4">IPV4</a><ul><li><a href="#nat-network-address-translation">NAT Network Address Translation</a></li></ul></li><li><a href="#ipv6">IPV6</a></li></ul></li><li><a href="#link-layer">Link Layer</a></li></ul></li><li><a href="#domain-name">Domain Name</a><ul><li><a href="#resolving-a-domain-name">Resolving A Domain Name</a><ul><li><a href="#caching">Caching</a></li></ul></li></ul></li><li><a href="#url">URL</a><ul><li><a href="#path">Path</a></li><li><a href="#query-string-">Query String :</a></li><li><a href="#fragment">Fragment</a></li></ul></li><li><a href="#web-browsers-servers-and-state">Web Browsers, servers and state</a></li><li><a href="#web-browsers">Web Browsers</a></li><li><a href="#web-servers">Web Servers</a></li><li><a href="#state">State</a><ul><li><a href="#solutions">Solutions</a><ul><li><a href="#query-strings">Query Strings</a></li><li><a href="#cookies">Cookies</a></li><li><a href="#sessions">Sessions</a></li></ul></li></ul></li><li><a href="#security">Security</a></li><li><a href="#hashing-algorithms">Hashing Algorithms</a><ul><li><a href="#salt">Salt</a></li></ul></li><li><a href="#redirect">Redirect</a></li><li><a href="#query-strings">Query Strings</a></li><li><a href="#https">HTTPS</a><ul><li><a href="#operation">Operation</a><ul><li><a href="#public-key">Public Key</a></li><li><a href="#certificate-authority">Certificate Authority</a></li></ul></li><li><a href="#drawbacks">Drawbacks</a></li><li><a href="#man-in-the-middle">Man in the Middle</a></li></ul></li><li><a href="#sql-injection">SQL Injection</a><ul><li><a href="#prevention">Prevention</a></li></ul></li><li><a href="#session-sniffing">Session Sniffing</a></li><li><a href="#session-fixation">Session Fixation</a></li><li><a href="#xss">XSS</a><ul><li><a href="#persistent-xss">Persistent-XSS</a></li></ul></li><li><a href="#directory-traversal">Directory traversal</a></li><li><a href="#php-cgi-vulnerabilities">PHP-CGI Vulnerabilities</a><ul><li><a href="#other-configuration-advice">Other Configuration Advice</a></li></ul></li><li><a href="#designing-for-mobile">Designing For Mobile</a></li><li><a href="#being-a-web-developer">Being A Web Developer</a></li><li><a href="#setting-up-a-real-website">Setting up a Real Website</a></li><li><a href="#xml-and-json">XML and JSON</a></li><li><a href="#usability">Usability</a></li><li><a href="#web-architectures-and-performance">Web Architectures and Performance</a></li></ul>
+</div>
+        </div>
+        
+        <div class="contents">
+            <main id="content" class="main-content" role="main">
+                <div class="partNav"><a href="./">🏡CS139</a></div>
+                <!-- Main Content of markdown or sub-layouts-->
+                <!-- Layout for One Page Notes -->
+<!-- 
+    Works for all modules as long as they 
+    - Have part: true
+    - Are defined as a collection in _config.yml
+    - The folder name is "_[Module Code]"
+--><h1 id="html">HTML</h1>
+       
+        <h1 id="introduction">Introduction</h1>
+<p>Stands for HyperText Markup Language.</p>
+
+<p>HTML is a <strong>semantic</strong> language it describes the structure of the document and not the content.</p>
+
+<h1 id="html-nesting-structure">HTML Nesting Structure</h1>
+<h2 id="parent">Parent</h2>
+<p>A tag is a parent of another if it immediately encloses the tag.</p>
+<h2 id="child">Child</h2>
+<p>A tag is a child of another if it is immediately enclosed by the tag.</p>
+<h2 id="ancestor">Ancestor</h2>
+<p>A tag is an ancestor if it is the parent or the parent of an ancestor of a tag.</p>
+<h2 id="descendant">Descendant</h2>
+<p>A tag is an descendant if it is the child or the child of a descendant of a tag.</p>
+<h2 id="sibling">Sibling</h2>
+<p>Two tags are siblings if they share a parent.</p>
+
+<h1 id="document-object-model">Document Object Model</h1>
+<p>The HTML document object Model is a tree of the objects within a documet</p>
+
+<p>starts with the document ant root element <code class="language-plaintext highlighter-rouge">&lt;html&gt;</code> includes all the tags in a structured tree to allow for navigation.</p>
+
+<h1 id="basic-syntax">Basic Syntax</h1>
+<p>HTML uses code tags for opening and closing to give information about the content inside, opening use <code class="language-plaintext highlighter-rouge">&lt;&gt;</code> and closing starts with a backslash <code class="language-plaintext highlighter-rouge">&lt;/&gt;</code></p>
+
+<p>The tags can also contain attributes with additional information like the class or ids.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Desc</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Opening tag</td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;a href="www.google.com"&gt;</code></td>
+    </tr>
+    <tr>
+      <td>element Name</td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;a</code></td>
+    </tr>
+    <tr>
+      <td>Attribute</td>
+      <td><code class="language-plaintext highlighter-rouge">href="www.google.com"</code></td>
+    </tr>
+    <tr>
+      <td>content</td>
+      <td><code class="language-plaintext highlighter-rouge">a search engine</code></td>
+    </tr>
+    <tr>
+      <td>closing tag</td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;/a&gt;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Example of a HTML tag: <code class="language-plaintext highlighter-rouge">&lt;a href="www.google.com"&gt; a search engine &lt;/a&gt;</code></p>
+
+<h2 id="empty-tags">Empty Tags</h2>
+
+<p>Some tags have no content and so are empty, a closing tag is not needed.
+<code class="language-plaintext highlighter-rouge">&lt;meta charset="utf-8"&gt;</code></p>
+
+<h1 id="html-nesting">HTML Nesting</h1>
+<p>All closing tags should occur in the reverse order they were opened. e.g</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;h1&gt; Share your &lt;strong&gt; Travels &lt;/strong&gt;&lt;h1&gt;</code></p>
+
+<p>is correct</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;h1&gt; Share your &lt;strong&gt; Travels &lt;h1&gt;&lt;/strong&gt;</code></p>
+
+<p>is incorrect</p>
+
+<h1 id="character-entities">Character Entities</h1>
+<p>Some symbols need to be represented with special characters so they are formatted correctly.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Entity</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&amp;nbsp;</code></td>
+      <td>non breakable space</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&amp;lt;</code></td>
+      <td>&lt;</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&amp;gt;</code></td>
+      <td>&gt;</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&amp;copy;</code></td>
+      <td>©</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&amp;trade;</code></td>
+      <td>™</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="block-vs-inline">Block vs Inline</h1>
+<p>Some elements are blocks these start and end with a new line. Examples are:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;h1&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;p&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;table&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;div&gt;</code></li>
+</ul>
+
+<p>Other elements are inline and can normally be integrated into a line of text without breaking it up.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;a&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;img&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;span&gt;</code></li>
+</ul>
+
+<h1 id="validation">Validation</h1>
+<p>for validation visit 
+<a href="https://validator.w3.org/">W3c</a>
+There is also a live html validation extension in VSCODE called: VS Code W3C Validation extention.</p>
+
+<h1 id="common-tags">Common Tags</h1>
+
+<h2 id="doctypes-r">Doctypes (R)</h2>
+<p>Every HTML document has a doctype definition 
+Variations of HTML, tells the browser what to expect.</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;!DOCTYPE html&gt;</code></p>
+
+<h2 id="html-r">HTML (R)</h2>
+<p>Specifies content as html.</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;html&gt; Content &lt;/html&gt;</code></p>
+
+<h2 id="head-r">Head (R)</h2>
+<p>Typically contains information about the page title etc.</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;head&gt;  &lt;/head&gt;</code></p>
+
+<h2 id="title">Title</h2>
+<p>Title of the page shown in the browser tab.</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;title&gt; Title of the page &lt;/title&gt;</code></p>
+
+<h2 id="meta--text-encoding">Meta / Text encoding</h2>
+<p>character encoding can be declared using the meta tag.</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;meta charset="utf-8"&gt;</code></p>
+
+<h2 id="body-r">Body (R)</h2>
+<p>contains the main page of information.</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;body&gt; content &lt;/body&gt;</code></p>
+
+<h2 id="headings">Headings</h2>
+<p>uses h1 through h6 in decreasing size.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;h1&gt;Welcome to cs136&lt;/h1&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;h2&gt;Welcome to cs136&lt;/h2&gt;</code></li>
+  <li>…..</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;h6&gt;Welcome to cs136&lt;/h6&gt;</code></li>
+</ul>
+
+<h2 id="a-links">A (Links)</h2>
+<p>produces a link that whn clicking on the content redirects to another page
+uses attribute href to specify page.</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;a href="www.google.com"&gt; a search engine &lt;/a&gt;</code></p>
+
+<p>href can link to external sites but can also link to within the page e.g <code class="language-plaintext highlighter-rouge">href="#top"</code> will move the page to a tag with id top.</p>
+
+<h2 id="img-image">Img (Image)</h2>
+<p>Displays an image on the page.</p>
+
+<p>Uses attribute src to specify location.</p>
+
+<p><code class="language-plaintext highlighter-rouge">alt</code> attribute is a description for software to interpret the image.</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;img src="file.gif" alt="file"&gt;</code></p>
+
+<h2 id="strong">Strong</h2>
+<p>makes any content bold</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;strong&gt; content &lt;/strong&gt;</code></p>
+
+<h2 id="p">P</h2>
+<p>specifies a paragraph of text</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;p&gt; paragraph &lt;/p&gt;</code></p>
+
+<h2 id="div-division">Div (Division)</h2>
+<p>defines site structure</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;div&gt; content &lt;/div&gt;</code></p>
+
+<h2 id="abbr-abbreviation">Abbr (Abbreviation)</h2>
+<p>used to define an abbreviation</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt; was founded in 1948</code></p>
+
+<h2 id="br-break">Br break</h2>
+<p>a break similar to newline no content</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;br&gt;</code></p>
+
+<h2 id="code">Code</h2>
+<p>give content a code like look</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;code&gt; this is code &lt;/code&gt;</code></p>
+
+<h2 id="em-emphasis">Em (emphasis)</h2>
+<p>provides emphasis usually italics</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;em&gt; no &lt;/em&gt;</code></p>
+
+<h2 id="mark">Mark</h2>
+<p>highlights the content</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;mark&gt; highlight &lt;/mark&gt;</code></p>
+
+<h2 id="small">Small</h2>
+<p>makes text small</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;small&gt; small text &lt;/small&gt;</code></p>
+
+<h2 id="span">Span</h2>
+<p>used to specify text for specific font and color changes</p>
+
+<p><code class="language-plaintext highlighter-rouge">the sky is &lt;span style="color:blue;font-weight:bold"&gt;blue&lt;/span&gt;</code></p>
+
+<h2 id="lists">Lists</h2>
+
+<ul>
+  <li>ordered list <code class="language-plaintext highlighter-rouge">&lt;ol&gt;</code>
+    <ul>
+      <li>List item <code class="language-plaintext highlighter-rouge">&lt;li&gt;</code></li>
+    </ul>
+  </li>
+  <li>Unordered list <code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code>
+    <ul>
+      <li>List item <code class="language-plaintext highlighter-rouge">&lt;li&gt;</code></li>
+    </ul>
+  </li>
+  <li>descriptive list <code class="language-plaintext highlighter-rouge">&lt;dl&gt;</code>
+    <ul>
+      <li>list terms <code class="language-plaintext highlighter-rouge">&lt;dt&gt;</code></li>
+      <li>List descriptions <code class="language-plaintext highlighter-rouge">&lt;dd&gt;</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="tables">Tables</h1>
+<p>Allows displaying data in rows and columns uses 3 tags.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;table&gt; &lt;/table&gt;</code>  overall table</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;tr&gt; &lt;/tr&gt;</code> table row</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;td&gt; &lt;/td&gt;</code> table data</li>
+</ul>
+
+<p>example:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;table&gt;</span>
+<span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Name<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Age <span class="nt">&lt;/td&gt;</span>
+<span class="nt">&lt;tr&gt;</span>
+<span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Kate<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>24 <span class="nt">&lt;/td&gt;</span>
+<span class="nt">&lt;tr&gt;</span>
+<span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;</span>James<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>35 <span class="nt">&lt;/td&gt;</span>
+<span class="nt">&lt;tr&gt;</span>
+<span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;</span>John<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>56 <span class="nt">&lt;/td&gt;</span>
+<span class="nt">&lt;tr&gt;</span>
+</code></pre></div></div>
+
+<p>Tables default to no lines. To include lines they should be specified in css.</p>
+
+<h2 id="modifying-tables">Modifying tables</h2>
+<h3 id="table-header">table header</h3>
+<p>using <code class="language-plaintext highlighter-rouge">&lt;thead&gt;</code> around the first <code class="language-plaintext highlighter-rouge">&lt;tr&gt;</code> specifies it as a header row</p>
+<h3 id="table-footer">table footer</h3>
+<p>using <code class="language-plaintext highlighter-rouge">&lt;tfoot&gt;</code> around the last <code class="language-plaintext highlighter-rouge">&lt;tr&gt;</code> specifies it as a footer row</p>
+<h3 id="caption">caption</h3>
+<p>Just inside the table a caption can be added using
+<code class="language-plaintext highlighter-rouge">&lt;caption&gt; &lt;/caption&gt;</code></p>
+
+<h3 id="rowspan">rowspan</h3>
+
+<p>Data can cross multiple rows through the use of rowspan</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;td rowspan="3"&gt; Data &lt;/td&gt;</code></p>
+
+<h3 id="column-span">column span</h3>
+<p>Data can cross multiple columns through the use of colspan</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;td colspan="2"&gt; Data &lt;/td&gt;</code></p>
+
+<h1 id="html-forms">HTML Forms</h1>
+
+<p>These are a way of gathering data form the user specified by <code class="language-plaintext highlighter-rouge">&lt;form&gt;</code> and providing them to the server
+has attributes:</p>
+<ul>
+  <li>action - what to do when the data is submitted</li>
+  <li>method - The way the data is sent Get or Set</li>
+  <li>accept-charset - The charset accepted by the form</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;form method ="post" action="auth.php"</code></p>
+<h2 id="form-elements">Form Elements</h2>
+<p>A form element allows the user to add information to the form for submission there are several types</p>
+
+<p>The element can also have a name attribute this can be used to reference the data the user entered</p>
+
+<h3 id="input">Input</h3>
+<p>used to select data form the user can have many different types</p>
+
+<ul>
+  <li>text - text input</li>
+  <li>password - input only shows dots</li>
+  <li>submit - a button the user can use to submit the form</li>
+  <li>radio - a circular checkbox can only select one in a group ,grouped by the attribute <code class="language-plaintext highlighter-rouge">name</code>, need attribute <code class="language-plaintext highlighter-rouge">value</code>, use <code class="language-plaintext highlighter-rouge">checked</code> for the default</li>
+</ul>
+
+<p>other types</p>
+<ul>
+  <li>color</li>
+  <li>date</li>
+  <li>datetime</li>
+  <li>datetime-local</li>
+  <li>email</li>
+  <li>month</li>
+  <li>number</li>
+  <li>range</li>
+  <li>search</li>
+  <li>tel</li>
+  <li>time</li>
+  <li>url</li>
+  <li>week
+support is patchy and not uniform across browsers
+    <h4 id="other-attributes">Other Attributes</h4>
+  </li>
+  <li>value - the default value needed to be deleted before entering info</li>
+  <li>placeholder - the suggested value is a ghost value</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;input type="text", name="name"&gt;</code></p>
+
+<h3 id="select">Select</h3>
+<p>Allows the user to select from pre-chosen options uses option</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;select</span> <span class="na">name=</span><span class="s">"location"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;option&gt;</span> Choose a country<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span> France<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span> United Kingdom <span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span> Germany <span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;/select&gt;</span>
+</code></pre></div></div>
+<p>in options</p>
+
+<p>attribute <code class="language-plaintext highlighter-rouge">value</code> can be used but defaults to the content
+attribute <code class="language-plaintext highlighter-rouge">selected</code> can be used to select the default</p>
+<h2 id="accessibility">Accessibility</h2>
+<p>A label can be created with the attribute <code class="language-plaintext highlighter-rouge">for</code>, by making it equal to an element software can interpret it to aid in accessability for people with assistive tools.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">first_name</span><span class="nt">&gt;</span>First Name:<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"fname"</span> <span class="na">id=</span><span class="s">"first_name"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+<h1 id="css">CSS</h1>
+       
+        <h1 id="introduction">Introduction</h1>
+<p>CSS stands for Cascading Style Sheets</p>
+
+<p>Intended to modify the appearance of HTML documents</p>
+
+<h1 id="placement-of-styles">Placement of Styles</h1>
+<p>The code for the stylesheet can be placed in 3 possible locations.</p>
+
+<h2 id="inside-respective-tags">Inside Respective Tags</h2>
+<p>This method is often discouraged because it causes HTML code to be very messy and if you want to change the styling, you have to go to individual HTML tags.
+<code class="language-plaintext highlighter-rouge">&lt;h1 style ="color:blue"&gt; content &lt;/h1&gt;</code></p>
+
+<h2 id="in-a-style-tag">In a Style Tag</h2>
+<p>Inside the <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> tag:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;style&gt;</span>
+ <span class="nt">h1</span> <span class="p">{</span><span class="nl">color</span><span class="p">:</span><span class="no">blue</span><span class="p">;}</span>
+<span class="nt">&lt;/style&gt;</span>
+</code></pre></div></div>
+<p>This method is used for certain styles.</p>
+
+<h2 id="in-a-separate-file">In a Separate File</h2>
+<p>The file containing the stylesheet is then linked in the <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> tag. This method is most commonly used.
+<code class="language-plaintext highlighter-rouge">&lt;link rel="stylesheet" href="styles.css"&gt;</code></p>
+
+<h1 id="types-of-stylesheet">Types of Stylesheet</h1>
+
+<p>There are 3 types of stylesheet</p>
+
+<ul>
+  <li>Author created style sheets</li>
+  <li>User created style sheets</li>
+  <li>Browser style sheets</li>
+</ul>
+
+<p>These are in decreasing importance the browser will always look for the most
+immediate style sheet for any definition</p>
+
+<p>The browser will <strong>Cascade</strong> onto the next style sheet up in the hierarchy if
+one there is no definition for the current style sheet
+ and will be applied in the following order</p>
+<ol>
+  <li>Browser Default</li>
+  <li>External Stylesheet</li>
+  <li>internal stylesheet (<code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>)</li>
+  <li>inline styling</li>
+</ol>
+
+<h1 id="syntax">Syntax</h1>
+
+<p>CSS is formed from selectors and declarations.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Selector</td>
+      <td><code class="language-plaintext highlighter-rouge">h1</code></td>
+    </tr>
+    <tr>
+      <td>Declaration</td>
+      <td><code class="language-plaintext highlighter-rouge">{color:blue;  ....}</code></td>
+    </tr>
+    <tr>
+      <td>property</td>
+      <td><code class="language-plaintext highlighter-rouge">color:</code></td>
+    </tr>
+    <tr>
+      <td>value</td>
+      <td><code class="language-plaintext highlighter-rouge">blue;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Example:</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">h1</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span><span class="no">blue</span><span class="p">;</span>
+    <span class="nl">font-size</span><span class="p">:</span><span class="m">12px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="box-model">Box Model</h1>
+
+<p>Every element is made form boxes and contains</p>
+<ol>
+  <li>Content</li>
+  <li>Padding</li>
+  <li>Border</li>
+  <li>Margin</li>
+</ol>
+
+<p>These can be use to adjust size and location .
+using properties like <code class="language-plaintext highlighter-rouge">margin</code> and <code class="language-plaintext highlighter-rouge">border</code></p>
+
+<h1 id="positioning">Positioning</h1>
+
+<p><strong>Static</strong> is the default and positions boxes according to the normal flow</p>
+
+<p>Other ways include <strong>fixed</strong> and <strong>floating</strong></p>
+
+<h1 id="selectors">Selectors</h1>
+
+<p>There are 3 ways of specifying a html element</p>
+
+<h2 id="using-the-tag-name">Using the Tag Name</h2>
+<p>This will modify all tags of that type</p>
+
+<p><code class="language-plaintext highlighter-rouge">h1 {color:blue;}</code></p>
+
+<h2 id="using-a-class-selector">Using a Class Selector</h2>
+<p>uses to modify just some elements uses <code class="language-plaintext highlighter-rouge">.</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">.large {color:blue;}</code></p>
+
+<h2 id="using-an-id">Using an Id</h2>
+<p>id is unique used to modify a single element</p>
+
+<p><code class="language-plaintext highlighter-rouge">#page_title {color:blue;}</code></p>
+
+<h2 id="attribute-selectors">Attribute Selectors</h2>
+
+<p>attribute selectors style HTML elements that contain an attribute
+use <code class="language-plaintext highlighter-rouge">[]</code> to specify an attribute</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Selector</th>
+      <th>Matches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[]</code></td>
+      <td>A specific attribute</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[=]</code></td>
+      <td>an attribute with a specific value</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[~=]</code></td>
+      <td>A specific attribute whose value matches at at least one of the words in a space delimited list of words</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[^=]</code></td>
+      <td>A specific attribute whose value begins with a specified value</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[*=]</code></td>
+      <td>A specific attribute whose value contains a substring</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[$=]</code></td>
+      <td>A specific attribute whose value ends with a specified value</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Example:</p>
+
+<p><code class="language-plaintext highlighter-rouge">[title=main]</code> would match <code class="language-plaintext highlighter-rouge">&lt;h1 title="main"&gt;</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">[title*=subtitle]</code> would match <code class="language-plaintext highlighter-rouge">&lt;h1 title="first_subtitle"&gt;</code></p>
+
+<h2 id="pseudo-selectors">Pseudo Selectors</h2>
+
+<p>A pseudo-element selector is recognized but does not explicitly point to an html element</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>::first-letter{}
+::first-line{}
+::selection{}
+</code></pre></div></div>
+
+<p>A pseudo-class selector targets a particular state or relationship</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a:link{}
+a:visited{}
+a:hover{}
+a:active{}
+</code></pre></div></div>
+
+<h2 id="contextual-selectors">Contextual Selectors</h2>
+<p>A contextual selector targets other tags within the document hierarchy</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Selector</th>
+      <th>Matches</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Descendant</td>
+      <td>A specified element contained within another specified element</td>
+      <td>div p</td>
+    </tr>
+    <tr>
+      <td>Child</td>
+      <td>A specified element that is a direct child of the specified element</td>
+      <td>div&gt;p</td>
+    </tr>
+    <tr>
+      <td>Adjacent Sibling</td>
+      <td>A specified element that is the next sibling of the specified element</td>
+      <td>h3+p</td>
+    </tr>
+    <tr>
+      <td>General Sibling</td>
+      <td>A specified element that shares the same parent as the other specified element</td>
+      <td>h3~p</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="properties">Properties</h1>
+
+<p>There are hundreds of properties, some key ones you should know are:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property-type</th>
+      <th>Property</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Fonts</td>
+      <td>font</td>
+    </tr>
+    <tr>
+      <td>Fonts</td>
+      <td>font-family</td>
+    </tr>
+    <tr>
+      <td>Fonts</td>
+      <td>font-size</td>
+    </tr>
+    <tr>
+      <td>Fonts</td>
+      <td>font-style</td>
+    </tr>
+    <tr>
+      <td>Fonts</td>
+      <td>font-weight</td>
+    </tr>
+    <tr>
+      <td>Text</td>
+      <td>letter-spacing</td>
+    </tr>
+    <tr>
+      <td>Text</td>
+      <td>line-height</td>
+    </tr>
+    <tr>
+      <td>Text</td>
+      <td>text-align</td>
+    </tr>
+    <tr>
+      <td>Text</td>
+      <td>text-decoration</td>
+    </tr>
+    <tr>
+      <td>Text</td>
+      <td>text-indent</td>
+    </tr>
+    <tr>
+      <td>Text color</td>
+      <td>color</td>
+    </tr>
+    <tr>
+      <td>Background</td>
+      <td>background</td>
+    </tr>
+    <tr>
+      <td>Background</td>
+      <td>background-color</td>
+    </tr>
+    <tr>
+      <td>Background</td>
+      <td>background-image</td>
+    </tr>
+    <tr>
+      <td>Background</td>
+      <td>background-position</td>
+    </tr>
+    <tr>
+      <td>Background</td>
+      <td>background-repeat</td>
+    </tr>
+    <tr>
+      <td>Color</td>
+      <td>opacity</td>
+    </tr>
+    <tr>
+      <td>Borders</td>
+      <td>border</td>
+    </tr>
+    <tr>
+      <td>Borders</td>
+      <td>border-color</td>
+    </tr>
+    <tr>
+      <td>Borders</td>
+      <td>border-width</td>
+    </tr>
+    <tr>
+      <td>Borders</td>
+      <td>border-style</td>
+    </tr>
+    <tr>
+      <td>Borders</td>
+      <td>border-top , border-left …..</td>
+    </tr>
+    <tr>
+      <td>Borders</td>
+      <td>border-image</td>
+    </tr>
+    <tr>
+      <td>Borders</td>
+      <td>border-radius</td>
+    </tr>
+    <tr>
+      <td>Borders</td>
+      <td>box-shadow</td>
+    </tr>
+    <tr>
+      <td>Spacing</td>
+      <td>padding</td>
+    </tr>
+    <tr>
+      <td>Spacing</td>
+      <td>padding-bottom , padding-left ….</td>
+    </tr>
+    <tr>
+      <td>Spacing</td>
+      <td>margin</td>
+    </tr>
+    <tr>
+      <td>Spacing</td>
+      <td>margin-bottom, marin-left…..</td>
+    </tr>
+    <tr>
+      <td>Sizing</td>
+      <td>height</td>
+    </tr>
+    <tr>
+      <td>Sizing</td>
+      <td>max-height</td>
+    </tr>
+    <tr>
+      <td>Sizing</td>
+      <td>max-width</td>
+    </tr>
+    <tr>
+      <td>Sizing</td>
+      <td>min-height</td>
+    </tr>
+    <tr>
+      <td>Sizing</td>
+      <td>min-width</td>
+    </tr>
+    <tr>
+      <td>Sizing</td>
+      <td>width</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Different properties take different values.</p>
+<ul>
+  <li>Color properties can use RGB, hex, RGBa .. values</li>
+  <li>Size based properties can use px, em , % , in , cm , pt</li>
+</ul>
+
+<p>Know the different value types for the main properties</p>
+
+<h1 id="table-styling">Table Styling</h1>
+<h2 id="table-borders">Table Borders</h2>
+<p>Borders around tables can increase readability</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">table</span><span class="o">,</span> <span class="nt">th</span><span class="o">,</span> <span class="nt">td</span> <span class="p">{</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>The border collapse property collapses the borders into a single line over 2 in parallel</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">table</span> <span class="p">{</span>
+  <span class="nl">border-collapse</span><span class="p">:</span> <span class="nb">collapse</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<h2 id="text-alignment">Text Alignment</h2>
+<p>Text in Tabels can be aligned within the cells</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">td</span> <span class="p">{</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">right</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="styling">Styling</h2>
+<p>Tables can be stripted usin <code class="language-plaintext highlighter-rouge">nth-child()</code></p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">tr</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">even</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#f2f2f2</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>color can be altered</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">th</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#4CAF50</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<h1 id="php">PHP</h1>
+       
+        <h1 id="introductions">Introductions</h1>
+
+<p>PHP is a server side scripting language</p>
+
+<p>Stands for PHP hypertext programing (go and figure what that stands for)</p>
+
+<p>Released in 1995</p>
+
+<p>Has some issues:</p>
+
+<ul>
+  <li>30% of vulnerabilities are related to PHP</li>
+  <li>Sloppy code leads to errors.</li>
+</ul>
+
+<p>PHP is run on the server side can collect data from:</p>
+<ul>
+  <li>databases</li>
+  <li>web services</li>
+  <li>files</li>
+  <li>email</li>
+  <li>other software</li>
+</ul>
+
+<h1 id="basic">Basic</h1>
+<p>the file name needs to be changes from <code class="language-plaintext highlighter-rouge">.html</code> to <code class="language-plaintext highlighter-rouge">.php</code></p>
+
+<p>all php code must be written inside <code class="language-plaintext highlighter-rouge">&lt;?php</code> and <code class="language-plaintext highlighter-rouge">?&gt;</code></p>
+
+<p>all php statements end with a semicolon</p>
+
+<p>comments are:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">//single line</code></li>
+  <li><code class="language-plaintext highlighter-rouge">/* multi-line */</code></li>
+</ul>
+
+<h2 id="simple-commands">Simple Commands</h2>
+
+<p><code class="language-plaintext highlighter-rouge">echo</code> inserts the output into the larger html page including any tags</p>
+
+<p><code class="language-plaintext highlighter-rouge">echo &lt;p&gt;&lt;strong&gt; Hello &lt;/strong&gt;&lt;/p&gt;</code></p>
+
+<h3 id="print-f">print f</h3>
+<p><code class="language-plaintext highlighter-rouge">print f</code> produces formatted statements form variables</p>
+
+<p><code class="language-plaintext highlighter-rouge">printf("String",variables)</code></p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$product</span><span class="o">=</span> <span class="n">box</span><span class="p">;</span>
+<span class="nv">$weight</span> <span class="o">=</span> <span class="mf">1.756723</span><span class="p">;</span>
+<span class="nb">printf</span><span class="p">(</span><span class="s2">"the %s is %.2f kilos"</span><span class="p">,</span><span class="nv">$product</span><span class="p">,</span><span class="nv">$weight</span><span class="p">);</span>
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Specifier</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>%f</td>
+      <td>float</td>
+    </tr>
+    <tr>
+      <td>%s</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>%d</td>
+      <td>decimal</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="null-coalescing-operator">NUll Coalescing Operator</h3>
+<p><code class="language-plaintext highlighter-rouge">??</code> can be used to assign a value if a variable is null
+<code class="language-plaintext highlighter-rouge">$username= $GET_["username"]??default</code></p>
+
+<p><a href="https://www.php.net/manual/en/function.printf.php">more here</a></p>
+
+<h1 id="variables">Variables</h1>
+<ul>
+  <li>Variable prefixed with $</li>
+  <li>must start with letter or <code class="language-plaintext highlighter-rouge">_</code></li>
+  <li>only contain alphanumerical characters and <code class="language-plaintext highlighter-rouge">_</code></li>
+  <li>No spaces</li>
+  <li>case sensitive</li>
+  <li>Dynamically typed</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="nv">$b</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nv">$a</span><span class="o">+</span><span class="nv">$b</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="constants">constants</h2>
+<p>Use <code class="language-plaintext highlighter-rouge">define()</code></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">define</span><span class="p">(</span><span class="s2">"PI"</span><span class="p">,</span><span class="mf">3.141592653</span><span class="p">);</span>
+<span class="nv">$pi</span><span class="o">=</span><span class="no">PI</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h1 id="data-types">Data Types</h1>
+<p>Scalar types</p>
+<ul>
+  <li>integer</li>
+  <li>float / double (these are the same)</li>
+  <li>boolean</li>
+  <li>string</li>
+</ul>
+
+<p>Compound Types</p>
+<ul>
+  <li>Array</li>
+  <li>Object</li>
+</ul>
+
+<h2 id="strings">Strings</h2>
+<p>need double quotes</p>
+
+<p>concatenation uses <code class="language-plaintext highlighter-rouge">.</code>
+can use <code class="language-plaintext highlighter-rouge">.=</code> for append</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$a</span> <span class="o">=</span> <span class="s2">"Hello"</span>
+<span class="nv">$b</span> <span class="o">=</span> <span class="s2">"World"</span>
+
+<span class="nv">$c</span> <span class="o">=</span> <span class="nv">$a</span><span class="mf">.</span><span class="s2">" "</span><span class="mf">.</span><span class="nv">$b</span>
+<span class="nv">$a</span> <span class="mf">.</span><span class="o">=</span> <span class="s2">" "</span>
+<span class="nv">$a</span> <span class="mf">.</span><span class="o">=</span> <span class="nv">$a</span>
+
+<span class="o">--</span>
+<span class="nv">$a</span> <span class="o">-&gt;</span> <span class="nc">Hello</span> <span class="nc">World</span>
+<span class="nv">$c</span> <span class="o">-&gt;</span> <span class="nc">Hello</span> <span class="nc">World</span>
+</code></pre></div></div>
+
+<h2 id="arrays">Arrays</h2>
+<p>Two types</p>
+<ul>
+  <li>Numeric Array</li>
+  <li>Associative array</li>
+</ul>
+
+<h3 id="numeric-array">Numeric Array</h3>
+
+<p>Creation:
+<code class="language-plaintext highlighter-rouge">$courses=("CS139","CS132","CS133");</code></p>
+
+<p>You can also do:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$courses</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="s2">"CS139"</span><span class="p">;</span>
+<span class="nv">$courses</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">"CS132"</span><span class="p">;</span>
+<span class="nv">$courses</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="s2">"CS133"</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="associative-array">Associative Array</h3>
+<p>Creation:</p>
+
+<p><code class="language-plaintext highlighter-rouge">$courses=("CS139"=&gt;"Web Dev","CS132"=&gt;"Not A Cult","CS133"=&gt;"Professional Skills");</code></p>
+
+<p>You can also do Representation:</p>
+
+<h1 id="operators">Operators</h1>
+
+<h2 id="arithmetic-operators">Arithmetic Operators</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">+</code></td>
+      <td>Addition</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-</code></td>
+      <td>Subtraction</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">*</code></td>
+      <td>Multiplication</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/</code></td>
+      <td>Division</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%</code></td>
+      <td>Modulus</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">++</code></td>
+      <td>Pre/Post increment</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">--</code></td>
+      <td>Pre/Post decrement</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="comparison-operators">Comparison Operators</h2>
+<p>gh-pages
+Operator | Name
+–|–
+<code class="language-plaintext highlighter-rouge">==</code> | Equal
+<code class="language-plaintext highlighter-rouge">===</code> | Identical
+<code class="language-plaintext highlighter-rouge">!=</code> | Not Equal
+<code class="language-plaintext highlighter-rouge">!===</code> | Not identical
+<code class="language-plaintext highlighter-rouge">&lt;</code> | Less than
+<code class="language-plaintext highlighter-rouge">&gt;</code> | Greater than
+<code class="language-plaintext highlighter-rouge">&lt;=</code> | Less than or equal
+<code class="language-plaintext highlighter-rouge">&gt;=</code> | Greater than or equal</p>
+
+<p>Identical same value <strong>and</strong> same type 5 is not identical to “5”</p>
+
+<h2 id="logical-operators">Logical Operators</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&amp;&amp;</code></td>
+      <td>AND</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">||</code></td>
+      <td>OR</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">!</code></td>
+      <td>NOT</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="array-operators">Array Operators</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$arr1 +$arr2</code></td>
+      <td>Union</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$arr1 == $arr2</code></td>
+      <td>Equal</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$arr1 === $arr2</code></td>
+      <td>Identical</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="branching">Branching</h1>
+
+<h2 id="if">If</h2>
+
+<p>similar to Java</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nv">$course</span> <span class="o">==</span> <span class="s2">"CS139"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">"Web Dev"</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$course</span> <span class="o">==</span><span class="s2">"CS132"</span><span class="p">){</span>
+    <span class="k">echo</span> <span class="s2">"not a cult"</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span><span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">"Not Web Dev and not not a cult"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>can use <code class="language-plaintext highlighter-rouge">:</code> instead of {}</p>
+
+<h2 id="switch">Switch</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">switch</span><span class="p">(</span><span class="nv">$course</span><span class="p">){</span>
+    <span class="k">case</span> <span class="s2">"CS139"</span><span class="o">:</span>
+        <span class="k">echo</span> <span class="s2">"Web Dev"</span><span class="p">;</span>
+    <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="s2">"CS132"</span><span class="o">:</span>
+        <span class="k">echo</span> <span class="s2">"not a cult"</span><span class="p">;</span>
+    <span class="k">break</span><span class="p">;</span>
+    <span class="k">default</span><span class="o">:</span>
+        <span class="k">echo</span> <span class="s2">"Not Web Dev and not not a cult"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>only judges by equality by if they are identical.</p>
+
+<h1 id="looping">Looping</h1>
+<h2 id="for-loop">For loop</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="nv">$x</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nv">$x</span> <span class="o">&lt;=</span><span class="mi">10</span><span class="p">;</span> <span class="nv">$x</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">echo</span> <span class="s2">"</span><span class="nv">$x</span><span class="s2"> &lt;br&gt;"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<h2 id="while-loop">While Loop</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$x</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="nv">$x</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">){</span>
+    <span class="k">echo</span> <span class="s2">"</span><span class="nv">$x</span><span class="s2"> &lt;br&gt;"</span><span class="p">;</span>
+    <span class="nv">$x</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<h2 id="do-while-loop">do while loop</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">do</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">"</span><span class="nv">$x</span><span class="s2"> &lt;br&gt;"</span><span class="p">;</span>
+    <span class="nv">$x</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nv">$x</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">);</span>
+</code></pre></div></div>
+<h2 id="array-iteration">Array Iteration</h2>
+<p>iterate over an array obtaining the value at each location</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">foreach</span><span class="p">(</span><span class="nv">$array</span> <span class="k">as</span> <span class="nv">$item</span><span class="p">){</span>
+    <span class="k">echo</span> <span class="nv">$item</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>for associative arrays</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">foreach</span><span class="p">(</span><span class="nv">$array</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$value</span><span class="p">){</span>
+    <span class="k">echo</span> <span class="nv">$key</span><span class="mf">.</span><span class="s2">"is"</span><span class="mf">.</span><span class="n">value</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="function">Function</h1>
+<p>Functions that have a return value can also (optionally) have a a return type</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="n">FunctionName</span> <span class="p">(</span><span class="nv">$arg1</span><span class="p">,</span><span class="nv">$arg2</span><span class="p">):</span><span class="kt">string</span><span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$arg1</span><span class="mf">.</span><span class="nv">$arg2</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="pass-by-reference">Pass by Reference</h2>
+<p>Adding an <code class="language-plaintext highlighter-rouge">&amp;</code> in front passes by reference, a variable
+change in a function is reflected outside the function scope</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="n">add</span><span class="p">(</span><span class="o">&amp;</span><span class="nv">$arg</span><span class="p">){</span>
+    <span class="nv">$arg</span><span class="o">+=</span><span class="mi">100</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="global">Global</h2>
+<p>Global scoped variables can be included in functions with global</p>
+
+<p>SHOULD BE AVOIDED</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$a</span> <span class="o">=</span><span class="s2">"a"</span><span class="p">;</span>
+<span class="nv">$b</span> <span class="o">=</span><span class="s2">"b"</span><span class="p">;</span>
+<span class="k">function</span> <span class="n">findAB</span><span class="p">(){</span>
+    <span class="k">global</span> <span class="nv">$a</span><span class="p">,</span><span class="nv">$b</span>
+    <span class="k">echo</span> <span class="nv">$a</span><span class="mf">.</span><span class="nv">$b</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h1 id="html-forms">HTML Forms</h1>
+<p>In PHP the data is converted from the requests to associative arrays.
+Post requests are <code class="language-plaintext highlighter-rouge">$_POST</code> get requests are <code class="language-plaintext highlighter-rouge">$_GET</code></p>
+
+<h1 id="php-from-another-file">PHP From Another File</h1>
+<p>Php can insert the contents of another file</p>
+
+<p><code class="language-plaintext highlighter-rouge">require &lt;script.php&gt;</code>, script stops if file can’t be found</p>
+
+<p><code class="language-plaintext highlighter-rouge">include &lt;script.php&gt;</code>, script attempts to continue if file cant be found</p>
+
+<p>also</p>
+
+<p><code class="language-plaintext highlighter-rouge">include_once</code> , <code class="language-plaintext highlighter-rouge">require_once</code></p>
+
+<p>Elements such as header or nav bar only need to be made once then can be copied over</p>
+
+<h1 id="objects-and-classes">Objects and Classes</h1>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">class</span> <span class="nc">Person</span><span class="p">{</span>
+    <span class="k">var</span> <span class="nv">$name</span><span class="p">;</span>
+    <span class="k">function</span> <span class="n">get_name</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">function</span> <span class="n">set_name</span><span class="p">(</span><span class="nv">$new</span> <span class="kt">_name</span><span class="p">){</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">name</span><span class="o">=</span><span class="nv">$new_name</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>All object variables need to be specified through <code class="language-plaintext highlighter-rouge">$this-&gt;</code></p>
+
+<h2 id="call-methods">Call Methods</h2>
+<p>To call a method 
+<code class="language-plaintext highlighter-rouge">$object-&gt;method(&lt;args&gt;)</code></p>
+
+<h2 id="constructor">Constructor</h2>
+<p>The constructor function is always  <code class="language-plaintext highlighter-rouge">__construct()</code></p>
+
+<p>Objects can be created through the <code class="language-plaintext highlighter-rouge">new</code> keyword</p>
+
+<p><code class="language-plaintext highlighter-rouge">$James= new Person();</code></p>
+<h2 id="access-modifier">Access Modifier</h2>
+<ul>
+  <li>public</li>
+  <li>private</li>
+  <li>protected</li>
+</ul>
+
+<p>can all be used to define access these should replace the <code class="language-plaintext highlighter-rouge">var</code> keyword or put in front of a function</p>
+
+<h2 id="inheritance">Inheritance</h2>
+<p><code class="language-plaintext highlighter-rouge">class Admin extends User</code></p>
+
+<p>parent class method id called by</p>
+
+<p><code class="language-plaintext highlighter-rouge">parent::method();</code></p>
+
+<h1 id="cookies">Cookies</h1>
+<p>Cookies can be added with the <code class="language-plaintext highlighter-rouge">setcookie()</code> function</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$expiry</span> <span class="o">=</span> <span class="nb">time</span><span class="p">()</span><span class="o">+</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">24</span><span class="o">*</span><span class="mi">7</span><span class="p">;</span>
+<span class="nv">$name</span><span class="o">=</span><span class="s2">"Username"</span><span class="p">;</span>
+<span class="nv">$value</span><span class="o">=</span><span class="s2">"James"</span><span class="p">;</span>
+<span class="nb">setcookie</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span><span class="nv">$value</span><span class="p">,</span><span class="nv">$expiry</span><span class="p">);</span>
+</code></pre></div></div>
+<p>cookies can be fetched using <code class="language-plaintext highlighter-rouge">$_COOKIE[value]</code></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="k">isset</span><span class="p">(</span><span class="nv">$_COOKIE</span><span class="p">[</span><span class="s2">"Username"</span><span class="p">])){</span>
+    <span class="k">echo</span> <span class="nv">$_COOKIE</span><span class="p">[</span><span class="s2">"Username"</span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="sessions">Sessions</h1>
+<p>To create a session use <code class="language-plaintext highlighter-rouge">session_start()</code> this must occur
+at the start of the file</p>
+
+<p>can be used with <code class="language-plaintext highlighter-rouge">$_SESSION[]</code></p>
+
+<p>set with <code class="language-plaintext highlighter-rouge">$_SESSION['Key'] = $value;</code></p>
+
+<p>and retrieve with  <code class="language-plaintext highlighter-rouge">$value =$_SESSION['Key'];</code></p>
+
+<p>values can be checked with <code class="language-plaintext highlighter-rouge">isset($_SESSION['Key'])</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">session_destroy()</code> can be used for logging out and removing all values</p>
+
+<p>example to check if a user is logged in</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nb">session_start</span><span class="p">();</span>
+<span class="k">if</span> <span class="p">(</span><span class="k">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'UserID'</span><span class="p">])){</span>
+    <span class="c1">// show page content here</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="p">{</span>
+    <span class="nb">header</span><span class="p">(</span><span class="sb">`location:HomePage.php`</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<h1 id="password-hashing">Password Hashing</h1>
+<p>Passwords should be hashed for storing to ensure security the hashes can be created with <code class="language-plaintext highlighter-rouge">password_hash()</code>
+and verified with <code class="language-plaintext highlighter-rouge">password_verify($password,$hashedPassword)</code></p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="k">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'username'</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="k">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'password'</span><span class="p">])){</span>
+    <span class="nv">$password</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'password'</span><span class="p">];</span>
+    <span class="nv">$hashedPassword</span> <span class="o">=</span> <span class="nf">getHashedPassword</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'username'</span><span class="p">]);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">password_verify</span><span class="p">(</span><span class="nv">$password</span> <span class="p">,</span><span class="nv">$hashedPassword</span><span class="p">)){</span>
+        <span class="nb">header</span><span class="p">(</span><span class="sb">`location:restrictedPage.php`</span><span class="p">);</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="nb">header</span><span class="p">(</span><span class="sb">`location:HomePage.php`</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+    <span class="nb">header</span><span class="p">(</span><span class="sb">`location:HomePage.php`</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="login-verification">Login Verification</h1>
+<p>It is important to verify that a user is logged in before they can access a page</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">require</span> <span class="sb">`access.php`</span><span class="p">;</span>
+<span class="nf">require_login</span><span class="p">();</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+<p>can be put at the top of pages to check if the user is logged in.</p>
+
+<p>inside access.php:</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">function</span> <span class="n">require_login</span><span class="p">(){</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'id'</span><span class="p">])){</span>
+        <span class="nb">header</span><span class="p">(</span><span class="s2">"Location:index.php"</span><span class="p">);</span>
+        <span class="k">exit</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+<p>if <code class="language-plaintext highlighter-rouge">$_SESSION['id']</code> is set when the user logs in this will prevent users
+from accessing pages unless they have logged in</p>
+<h1 id="sql">SQL</h1>
+<p>first a database connection must be established</p>
+
+<p><code class="language-plaintext highlighter-rouge">$db =  new SQLite3('database.db');</code></p>
+
+<p>the database can then be queried</p>
+
+<p><code class="language-plaintext highlighter-rouge">$db-&gt;exec(&lt;SQL&gt;)</code> for result less queries</p>
+
+<p><code class="language-plaintext highlighter-rouge">$db-&gt;query(&lt;SQL&gt;)</code> which returns a result</p>
+
+<p>handing a query result</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$result</span> <span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="nf">query</span><span class="p">(</span><span class="s2">"SELECT * FROM Users"</span><span class="p">);</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nv">$row</span> <span class="o">=</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="nf">fetchArray</span><span class="p">()){</span>
+    <span class="k">echo</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">'username'</span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="serialization">Serialization</h1>
+<p>can be used for storing objects and complex data as a string
+<code class="language-plaintext highlighter-rouge">$string = serialize($object);</code></p>
+
+<p>the text can then be un-serialized 
+<code class="language-plaintext highlighter-rouge">$object= unserialize($string);</code></p>
+
+<h1 id="reading-and-writing-files">Reading and Writing Files</h1>
+<p>two types oif access stream access, will read a small portion at a time. All-in-Memory access can read the entire file to memory.</p>
+
+<h2 id="stream-access">Stream Access</h2>
+<p>similar to ‘C’</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fopen()</code> - opens the file</li>
+  <li><code class="language-plaintext highlighter-rouge">fgets()</code> - gets a portion of the file</li>
+  <li><code class="language-plaintext highlighter-rouge">fclose()</code>- closes the file</li>
+</ul>
+
+<h2 id="in-memory-access">In-memory Access</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">file()</code> Reads the entire file and returns an array of each line in the file</li>
+  <li><code class="language-plaintext highlighter-rouge">file_get_contents()</code> Read the entire file and return a string</li>
+  <li><code class="language-plaintext highlighter-rouge">file_put_contents()</code> Writes the contents of a string variable to a file</li>
+</ul>
+
+<h1 id="errors">Errors</h1>
+<p>3 types of errors</p>
+<ul>
+  <li>Expected Errors - typing in the wrong name</li>
+  <li>Warnings - thing to warn the user about, start before end dates</li>
+  <li>Fatal Errors - things that stop the process, should still be recoverable</li>
+</ul>
+
+<h2 id="reporting">Reporting</h2>
+<p>error reporting can be done with</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">error_reporting</span><span class="p">(</span><span class="kc">E_ALL</span><span class="p">);</span>
+<span class="nb">ini_set</span><span class="p">(</span><span class="s2">"display_errors"</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h1 id="superglobals">Superglobals</h1>
+<p>Name | Description
+–|–
+$Globals | Array For storing data that needs the superglobal scope
+$_Cookies | Array of cookie data passed via HTTP request
+$_ENV | Array of server environment data
+$_FILES | Array of files uploaded to the server
+$_GET | Array fo query string data passed to the server via the URL
+$_POST | Array fo query string data passed to the server via the HTTP header
+$_REQUEST | Array containing the contents of $_GET, $_POST, $_COOKIES
+$_SESSION | Array containing session data
+$_SERVER | Array containing information about the request and the server</p>
+
+<p><code class="language-plaintext highlighter-rouge">$_SERVER["HTTP_REFERRER"]</code> information about where the user came from</p>
+
+<p><code class="language-plaintext highlighter-rouge">$_FILES</code> used with post requests HTTP should have a file input type for a form</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">$_FILES["File1"]["name"]</code> - anme fo the file</li>
+  <li><code class="language-plaintext highlighter-rouge">$_FILES["File1"]["type"]</code> - e.g img.png</li>
+  <li><code class="language-plaintext highlighter-rouge">$_FILES["File1"]["tmp_name"]</code> where is was upladed to</li>
+  <li><code class="language-plaintext highlighter-rouge">$_FILES["File1"]["error"]</code> “UPLOAD_ERR_OK” if no error</li>
+  <li><code class="language-plaintext highlighter-rouge">$_FILES["File1"]["size"]</code> in bytes</li>
+</ul>
+
+<p>then 
+<code class="language-plaintext highlighter-rouge">move_uploaded_file($tmp_file,$new_file);</code></p>
+<h1 id="javascript">JavaScript</h1>
+       
+        <h1 id="introduction">Introduction</h1>
+
+<p>Javascript is an interpreted programming language</p>
+
+<p>developed by Brendan Eich at Netscape in 1990s</p>
+
+<p>Formalized as ECMAScript language standard</p>
+
+<p>Mostly Client side but can be used server side</p>
+
+<p>## Uses</p>
+
+<p>Dynamically creating HTML</p>
+
+<p>Changing existing html</p>
+
+<p>Responding to user events</p>
+
+<p>Validating input</p>
+
+<p>Background upload of data</p>
+
+<h1 id="basic">Basic</h1>
+
+<p>Javascript is written between <code class="language-plaintext highlighter-rouge">&lt;script&gt; &lt;/script&gt;</code> tags in html</p>
+
+<p>Alternatively can be written in an external file using</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;script src="myjs.js" type="text/javascript" charset="utf=8"&gt;&lt;/script&gt;</code></p>
+
+<p>All statement lines end with a colon.</p>
+
+<p>Javascript is executed when the page loads</p>
+
+<h2 id="commands">Commands</h2>
+
+<p><code class="language-plaintext highlighter-rouge">alert("");</code> Displays a popup to the user</p>
+
+<p><code class="language-plaintext highlighter-rouge">document.write("");</code> Writes content to the web page</p>
+
+<p><code class="language-plaintext highlighter-rouge">console.log(""):</code> Can add text to the hidden browser console</p>
+
+<h2 id="variables">Variables</h2>
+<p>Variables are loosely typed</p>
+
+<p>Names must start with letters <code class="language-plaintext highlighter-rouge">$</code> or <code class="language-plaintext highlighter-rouge">_</code> and are case sensitive</p>
+
+<p>created with <code class="language-plaintext highlighter-rouge">var</code> keyword</p>
+
+<p><code class="language-plaintext highlighter-rouge">Var x = 2;</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">var y = "Hello";</code></p>
+
+<h2 id="datatypes">DataTypes</h2>
+<ul>
+  <li>strings - text inside single or double quotes</li>
+  <li>Numbers - both decimals and integers</li>
+  <li>Boolean - true/false</li>
+  <li>Arrays</li>
+  <li>objects</li>
+  <li>Null - Empty variable</li>
+  <li>Undefined - unset variable</li>
+  <li>Function</li>
+</ul>
+
+<h2 id="arrays">Arrays</h2>
+
+<p>Arrays are 0 indexed</p>
+
+<pre><code class="language-javaScript">var animals = new Array();
+animals[0]="Dog";
+animals[1]="Cat";
+animals[3]=2;
+</code></pre>
+<p>Arrays can sore different object types</p>
+
+<h3 id="common-methods">Common Methods</h3>
+
+<ul>
+  <li>length - <code class="language-plaintext highlighter-rouge">animals.length</code></li>
+  <li>index  - <code class="language-plaintext highlighter-rouge">animals.indexOf("Cat")</code></li>
+</ul>
+
+<h2 id="functions">Functions</h2>
+
+<p>a java script function can be created with the keyword <code class="language-plaintext highlighter-rouge">function</code></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Name</span><span class="p">(</span><span class="nx">args</span><span class="p">){</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+<p>can return a value using the <code class="language-plaintext highlighter-rouge">return</code> keyword</p>
+
+<h1 id="control-flow">Control Flow</h1>
+<h2 id="if">IF</h2>
+<pre><code class="language-javaScript">if (course==`cs139`){
+    alert("Web dev");
+}else if (course == 'cs132'){
+    alert("Not a Cult");
+}else{
+    alert("Something else");
+}
+</code></pre>
+<h2 id="switch">Switch</h2>
+<pre><code class="language-Javascript">switch (course){
+    case 'cs139':
+        alert("Web dev");
+        break;
+    case 'cs132':
+        alert("Not a Cult");
+        break;
+    default:
+        alert("Something else");
+}
+</code></pre>
+<h2 id="for-loop">For Loop</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">i</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">,</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<h2 id="while-loop">While Loop</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">x</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">){</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">x</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="objects">Objects</h1>
+
+<p>Objects are a collection of properties similar to Key-value pairs.</p>
+
+<p><code class="language-plaintext highlighter-rouge">var person = {first_name:"Adam",last_name:"Chester"};</code></p>
+
+<p>As variables can be functions methods are handles the same way</p>
+
+<p>Properties can be accessed using dot notation <code class="language-plaintext highlighter-rouge">person.first_name</code></p>
+
+<p>Properties can be created arbitrarily <code class="language-plaintext highlighter-rouge">person.age = 60</code></p>
+
+<h2 id="constructor-function">Constructor Function</h2>
+<p>JavaScript can create an object from a single function</p>
+
+<p>Uses the <code class="language-plaintext highlighter-rouge">this</code> keyword to reference object variables</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">firstName</span><span class="p">,</span><span class="nx">lastName</span><span class="p">,</span><span class="nx">age</span><span class="p">){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">FirstName</span><span class="o">=</span><span class="nx">FirstName</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">LastName</span><span class="o">=</span><span class="nx">LastName</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">age</span><span class="o">=</span><span class="nx">age</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">bio</span><span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span><span class="o">+</span><span class="dl">"</span><span class="s2"> </span><span class="dl">"</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="nx">lastName</span><span class="o">+</span><span class="dl">"</span><span class="s2"> is </span><span class="dl">"</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="nx">age</span><span class="o">+</span><span class="dl">"</span><span class="s2"> years old</span><span class="dl">"</span><span class="p">;</span>
+        <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="dl">"</span><span class="s2">John</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">Smith</span><span class="dl">"</span><span class="p">,</span><span class="mi">60</span><span class="p">);</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">person</span><span class="p">.</span><span class="nx">bio</span><span class="p">());</span>
+</code></pre></div></div>
+<h2 id="classes">Classes</h2>
+<p>Full javascript object classes do exist but were not discussed in the videos.</p>
+
+<h1 id="navigating-the-dom">Navigating the DOM</h1>
+<p>Javascript can manipulate the objects within the document object model</p>
+
+<p>Number of ways to refer to a HTML element</p>
+
+<ul>
+  <li>by ID <code class="language-plaintext highlighter-rouge">document.getElementById("");</code></li>
+  <li>by tag Name <code class="language-plaintext highlighter-rouge">document.getElementsByTagName("");</code></li>
+  <li>by the class <code class="language-plaintext highlighter-rouge">document.getElementsByClassName("");</code></li>
+</ul>
+
+<p>Changing the inner element:</p>
+
+<p><code class="language-plaintext highlighter-rouge">document.getElementById("").innerHTML="Changed it";</code></p>
+
+<p>Changing the attributes, in this example <code class="language-plaintext highlighter-rouge">src</code> is the image source attribute:</p>
+
+<p><code class="language-plaintext highlighter-rouge">document.getElementById("image").src="new.gif";</code></p>
+
+<p>Changing the style can be accessed with <code class="language-plaintext highlighter-rouge">style</code> then altering the style properties:</p>
+
+<p><code class="language-plaintext highlighter-rouge">document.getElementById("main").style.color="blue";</code></p>
+
+<p>other commands</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;element&gt;.parentNode</code></li>
+  <li><code class="language-plaintext highlighter-rouge">document.createElement("")</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;element&gt;.InsertBefore(newNode,ReferenceNode)</code></li>
+</ul>
+
+<p>elements can be stored in variables</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">heading</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">heading</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">heading</span><span class="p">.</span><span class="nx">innerHTML</span><span class="o">=</span><span class="dl">"</span><span class="s2">Changed it</span><span class="dl">"</span>
+</code></pre></div></div>
+
+<h1 id="event-handling">Event Handling</h1>
+<p>one way to handle events is using attributes:</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;h1 onclick="this.innerHTML='changed'"&gt; CLICK ME &lt;/h1&gt;</code></p>
+
+<p>Function can be used for the onclick attribute</p>
+
+<p>Can be aded programmatically:</p>
+
+<p><code class="language-plaintext highlighter-rouge">document.getElementById("main").onclick = alert("hello");</code></p>
+
+<h2 id="forms">Forms</h2>
+
+<p>Forms have a special event handler called <code class="language-plaintext highlighter-rouge">onsubmit</code></p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">validateForm</span><span class="p">(){</span>
+    <span class="nx">username</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">Username</span><span class="dl">"</span><span class="p">).</span><span class="nx">value</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">username</span><span class="o">==</span><span class="kc">null</span> <span class="o">||</span> <span class="nx">username</span><span class="o">==</span><span class="dl">""</span><span class="p">){</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">No username</span><span class="dl">"</span><span class="p">);</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Can be used in the form with:</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;form onsubmit="return validateForm()" action="submit.php"&gt;</code></p>
+
+<h1 id="jquery">jQuery</h1>
+<p>JQuery is a framework to shorten document navigation and event handling</p>
+
+<p>Attempts to standardize a lot commands across browsers</p>
+
+<p>JQuery can be added in the same was as an external javaScript program</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf=8"&gt;&lt;/script&gt;</code></p>
+
+<p>jQuery uses the $ function</p>
+<h2 id="starting-scripts">Starting Scripts</h2>
+<p>Typically it is desirable for scripts to start after the while file has loaded
+this can be achieved using the DOM ready event.</p>
+
+<p><code class="language-plaintext highlighter-rouge">$(document).ready(function(){...});</code></p>
+
+<p>When using the jQuery function a jQuery object is crated this wraps the HTML and provided it with additional functionality.</p>
+
+<h2 id="magical-objects">Magical Objects</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">$('H1')</code> - all of the H1 elements on a a page</li>
+  <li><code class="language-plaintext highlighter-rouge">$("#header")</code> - element with id header</li>
+  <li><code class="language-plaintext highlighter-rouge">$('.title')</code> - elements with a class of title</li>
+</ul>
+
+<h3 id="many-items">Many Items</h3>
+<p>There are also several ways fo obtainging the first itme of sevveral</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">$('H1')[0]</code></li>
+  <li><code class="language-plaintext highlighter-rouge">$('H1:first')</code></li>
+  <li><code class="language-plaintext highlighter-rouge">$('H1').first()</code>
+all get the first element</li>
+</ul>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">html();</code> - gets the inner html of an object</li>
+  <li><code class="language-plaintext highlighter-rouge">html('HERE');</code> - sets the inner html of an object</li>
+  <li><code class="language-plaintext highlighter-rouge">append("More content");</code> - add content to the end of the element</li>
+  <li><code class="language-plaintext highlighter-rouge">prepend("More content");</code> - add content to the start of the element</li>
+  <li><code class="language-plaintext highlighter-rouge">remove();</code> - removes an element</li>
+</ul>
+
+<p>Traversing</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">parent()</code></li>
+  <li><code class="language-plaintext highlighter-rouge">children()</code></li>
+  <li><code class="language-plaintext highlighter-rouge">siblings()</code></li>
+</ul>
+
+<p>Styling</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">addClass("newClass")</code></li>
+  <li><code class="language-plaintext highlighter-rouge">removeClass("newClass")</code></li>
+  <li><code class="language-plaintext highlighter-rouge">toggleclass("newClass")</code></li>
+  <li><code class="language-plaintext highlighter-rouge">hasClass("newClass")</code></li>
+  <li><code class="language-plaintext highlighter-rouge">height()</code></li>
+  <li><code class="language-plaintext highlighter-rouge">width()</code></li>
+  <li><code class="language-plaintext highlighter-rouge">css("background-color")</code> - gets the css values</li>
+  <li><code class="language-plaintext highlighter-rouge">css("background-color","green")</code> - sets the css values</li>
+</ul>
+
+<p>I the html content has changed the jQuery variables must be refreshed by calling the jQuery function again</p>
+
+<h2 id="jquery-events">JQuery Events</h2>
+<p>To bind events in jQuery</p>
+<ol>
+  <li>Give the element an ID</li>
+  <li>Tell jQuery that something should happen to the element</li>
+  <li>Give JQuery the code ot run when the event occurs</li>
+</ol>
+
+<p>Example
+HTML</p>
+<pre><code class="language-HTML">&lt;button id='hello'&gt;Say hello&lt;/button&gt;
+</code></pre>
+<p>JS</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()){</span>
+    <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#hello</span><span class="dl">"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)){</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>There are many different Events</p>
+
+<p>Keyboard</p>
+<ul>
+  <li>focusIn - user clicks on the element</li>
+  <li>focusOut - user leaves element</li>
+  <li>keyDown</li>
+  <li>KeyUp</li>
+  <li>keyPress - up/down combination</li>
+</ul>
+
+<p>Mouse Events</p>
+<ul>
+  <li>click</li>
+  <li>dblClick</li>
+  <li>hover</li>
+  <li>mousedown/ mouseup</li>
+  <li>mouseenter / mouseleave</li>
+</ul>
+
+<p>There can be multiple handlers for a single event type</p>
+
+<p>There is no guarantee about what order the events are called</p>
+
+<h3 id="event-binding">Event Binding</h3>
+<p>Events can only be bound when an element exists.</p>
+
+<p>This can be fixed by creating an event listener that captures all squares</p>
+
+<p>Uses JQuery’s built in ON</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#container</span><span class="dl">'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">.square</span><span class="dl">"</span><span class="p">,</span><span class="kd">function</span><span class="p">()){</span>
+    <span class="nx">$this</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="dl">"</span><span class="s2">background-color</span><span class="dl">"</span><span class="p">,</span><span class="nx">generateColor</span><span class="p">());</span>
+<span class="p">});</span>
+</code></pre></div></div>
+<p>This monitors the parent for events then checks the chid it check if it matches
+no updated events are needed for newly created elements</p>
+
+<h2 id="event-bubbling">Event Bubbling</h2>
+<p>DOM elements are nested</p>
+
+<p>When an event is triggered on an element is it is triggered on the parent
+clicking on a paragraph also clicks the body</p>
+
+<p>This can be stopped with <code class="language-plaintext highlighter-rouge">event.stopPropagation()</code> and is placed inside the function.</p>
+
+<h1 id="animation">Animation</h1>
+<p>JQuery can do simple animations</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">show()</code></li>
+  <li><code class="language-plaintext highlighter-rouge">hide()</code></li>
+  <li><code class="language-plaintext highlighter-rouge">fadeIn()</code></li>
+  <li><code class="language-plaintext highlighter-rouge">fadeOut()</code></li>
+  <li><code class="language-plaintext highlighter-rouge">fadeToggle()</code></li>
+  <li><code class="language-plaintext highlighter-rouge">slideUp()</code></li>
+  <li><code class="language-plaintext highlighter-rouge">slideDown()</code></li>
+</ul>
+
+<p>and more</p>
+
+<h1 id="ajax">AJAX</h1>
+<p>Traditionally webpages were static. However now new data and information is needed from the server</p>
+
+<p>Ajax Asynchronous JavaScript and XML is a collection of inter related web technologies that can sent and receive data form a server without a full refresh.</p>
+
+<p>Data can be sent in the background the user can do other things</p>
+
+<p>Data can be returned  as XML</p>
+
+<p>More likely to bs JSON, Javascript Object Notation</p>
+
+<h2 id="steps">Steps</h2>
+<ol>
+  <li>An Event occurs</li>
+  <li>Crate an XMLHttpRequest object</li>
+  <li>Send HTTPRequest</li>
+  <li>Server receives and processes that data</li>
+  <li>Server sends a response to the browser</li>
+  <li>Browser receives response using javascript</li>
+  <li>Update page content</li>
+</ol>
+
+<h2 id="implementations">Implementations</h2>
+
+<p>using the XMLHttpRequestObject which can be created using <code class="language-plaintext highlighter-rouge">XMLHttpRequest();</code></p>
+
+<p>The request can the be opened using <code class="language-plaintext highlighter-rouge">xmlhttp.open("method","url","asynchronous");</code></p>
+<ul>
+  <li>Method - typically GET or POST</li>
+  <li>URL - the resource location</li>
+  <li>asynchronous true/false</li>
+</ul>
+
+<p>To send the data to the server</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">xmlhttp.send():</code> for GET requests</li>
+  <li><code class="language-plaintext highlighter-rouge">xmlhttp.send(string):</code> for POST requests</li>
+</ul>
+
+<p>When the request is sent an <code class="language-plaintext highlighter-rouge">onreadystatechange</code> event is triggered</p>
+
+<p>the <code class="language-plaintext highlighter-rouge">readyState</code> attribute holds the status of the event as an integer</p>
+<ol>
+  <li>request not initialized</li>
+  <li>Server connection established</li>
+  <li>Request received</li>
+  <li>Processing request</li>
+  <li>Request finished and response complete</li>
+</ol>
+
+<p>The response can be accessed with tht following</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">responseText</code> - the response data as a string</li>
+  <li><code class="language-plaintext highlighter-rouge">responseXML</code> - the response data as XML</li>
+</ul>
+
+<p>example:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">xmlhttp</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+<span class="nx">xmlhttp</span><span class="p">.</span><span class="nx">onreadystatechange</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">xmlhttp</span><span class="p">.</span><span class="nx">readyState</span><span class="o">==</span><span class="mi">4</span> <span class="o">&amp;&amp;</span> <span class="nx">xmlhttp</span><span class="p">.</span><span class="nx">status</span><span class="o">==</span><span class="mi">200</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">myDiv</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span><span class="o">=</span><span class="nx">xmlhttp</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">xmlhttp</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">names.php?var=&lt;DATA&gt;</span><span class="dl">"</span><span class="p">,</span><span class="kc">true</span><span class="p">);</span>
+<span class="nx">xmlhttp</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
+</code></pre></div></div>
+<h2 id="jquery-and-ajax">JQuery and AJAX</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">names.php?var=&lt;DATA&gt;</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+    <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#myDiv</span><span class="dl">"</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+<p>another way</p>
+
+<pre><code class="language-javaScript">$.ajax({
+    url="/names.php",
+    data: "{var:'&lt;DATA&gt;'}"
+    success: updatePage();
+});
+</code></pre>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">url</code></li>
+  <li><code class="language-plaintext highlighter-rouge">data</code> - json data to be passed to the server</li>
+  <li><code class="language-plaintext highlighter-rouge">success</code>- A function to call when the request completes</li>
+</ul>
+<br/>
+            <hr style="
+                padding: 5px;
+                border-radius: 1em;
+                background-color: whitesmoke;
+            ">
+            <br/><h1 id="sql">SQL</h1>
+       
+        <h1 id="key-commands">Key Commands</h1>
+
+<h1 id="database-theory">Database Theory</h1>
+<p>“Keep what changes abd what stays the same separate”</p>
+
+<p>Keep structure and date separate</p>
+
+<h2 id="sql">SQL</h2>
+<p>Structures Query Language</p>
+
+<p>interact with a relational database</p>
+
+<h2 id="relational-database">Relational Database</h2>
+<p>Data is linked to other data through the use of, unique id and links/ references</p>
+
+<h2 id="database-management">Database Management</h2>
+<p>Databases need to be managed</p>
+
+<p>Users, password access rights</p>
+
+<p>Mostly beyond scope of this course</p>
+
+<h2 id="nosql">NoSQL</h2>
+<p>Store data in Key value Pairs</p>
+
+<p>Similar to accusative arrays</p>
+
+<p>Fast retrieval through hash functions
+Uses HAsh functions rather ehn</p>
+
+<h2 id="acid-compliance">ACID Compliance</h2>
+<p>ensures transactions are robust</p>
+<ul>
+  <li>atomicity - each transaction is a single unit</li>
+  <li>consistency - only take the database from one valid state to another</li>
+  <li>isolation - Transactions occurring in parallel are result in the same result as transactions in series</li>
+  <li>durability - Once a transaction has occurs it will remain regardless of system failure</li>
+</ul>
+
+<h2 id="database-table">Database Table</h2>
+
+<p>Place to store data of the same type</p>
+
+<p>Columns are decides on creation</p>
+
+<p>Rows are data that is entered</p>
+
+<p>Unlimited number of rows are available but fixed number of columns.</p>
+
+<h2 id="links">Links</h2>
+<h3 id="one-to-one">One to One</h3>
+<p>One record is associated with one and only one record.</p>
+
+<ul>
+  <li>one person has one passport
+    <h3 id="one-to-many">One to Many</h3>
+    <p>One record points to many records.</p>
+  </li>
+  <li>A User has many posts</li>
+  <li>A post has one user</li>
+</ul>
+
+<h3 id="many-to-many">Many to Many</h3>
+<p>Many records are related to many records.</p>
+
+<ul>
+  <li>One student attends many courses</li>
+  <li>One course is attend by many Students</li>
+</ul>
+
+<h2 id="identifiers">Identifiers</h2>
+<p>Each data row has an ID that can be used to reference the data.</p>
+
+<h2 id="schema">Schema</h2>
+<p>A script used to create a database from scratch, used to define tables.</p>
+
+<p>The script may also contain default/ demo values</p>
+
+<h1 id="detailed-commands">Detailed Commands</h1>
+
+<h2 id="data-types">Data Types</h2>
+
+<ul>
+  <li>integer - whole Numbers</li>
+  <li>real - decimal numbers</li>
+  <li>text</li>
+  <li>varchar (length)- fixed length text</li>
+  <li>date</li>
+  <li>datetime - date and time</li>
+  <li>blob - binary data</li>
+</ul>
+
+<h3 id="data-modifiers">Data Modifiers</h3>
+<h4 id="auto-increment">Auto increment</h4>
+<p><code class="language-plaintext highlighter-rouge">id integer PRIMARY KEY</code>
+when inserting values use NULL</p>
+
+<h2 id="table-operations">Table Operations</h2>
+<h3 id="create-table">Create Table</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">&lt;</span><span class="k">table</span> <span class="n">name</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="o">&lt;</span><span class="n">column1</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">Datatype</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">column2</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">Datatype</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">column3</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">Datatype</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">column4</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">Datatype</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="delete-table">Delete Table</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">DROP</span> <span class="k">TABLE</span> <span class="n">table1</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="add-data">Add Data</h2>
+<pre><code class="language-SQL">INSERT INTO table1 VALUES (value1,value2,value3,....);
+</code></pre>
+<h2 id="updating-records">Updating Records</h2>
+<pre><code class="language-SQL">UPDATE table1 SET column1 = value1 WHERE column2=value2;
+
+Multiple records
+UPDATE table1 SET column1 = value1,column2 = value2 WHERE column3=value3;
+</code></pre>
+
+<h2 id="deleting-records">Deleting Records</h2>
+<pre><code class="language-SQL">DELETE FROM table1 WHERE &lt;column1=value1;
+</code></pre>
+<h2 id="find-data">Find Data</h2>
+
+<pre><code class="language-SQL">SELECT column1,column2,.. FROM table1 WHERE column1=value1;
+</code></pre>
+<p><code class="language-plaintext highlighter-rouge">*</code> is a wildcard can be used in place of fields for all fields</p>
+
+<p>can add order</p>
+<pre><code class="language-SQL">ORDER BY column1,column2 ASC|DESC ;
+</code></pre>
+
+<p>Multiple Tables</p>
+
+<pre><code class="language-SQL">Select * from table1,table2 where column1=value2 AND column1=table2.column2;
+</code></pre>
+<h1 id="history-of-the-internet">History of the Internet</h1>
+       
+        <h1 id="history-of-the-internet">History of the Internet</h1>
+
+<h2 id="telephone-and-circuit-switching">Telephone and Circuit Switching</h2>
+
+<p>Circuit switching uses a physical connection for the duration of the connection, a dedicate line is needed for each connection.</p>
+
+<h2 id="packet-network">Packet Network</h2>
+
+<p>The information is slit up into small chunks and then sent across many different line the line switches between many different packets from deferent sources, allows many people to use a single line for data transmission.</p>
+
+<h2 id="internet-vs-world-wide-web">Internet vs World Wide Web</h2>
+
+<ul>
+  <li>Email</li>
+  <li>The Word Wide Web</li>
+  <li>Online Gaming</li>
+  <li>File transfer</li>
+  <li>and more</li>
+</ul>
+
+<p>Are all part of the internet the worldwide web is mainly webpages, things you access with a browser.</p>
+
+<h1 id="early-web">Early Web</h1>
+
+<h2 id="pre-1995">pre 1995</h2>
+
+<p>Tim Berners-Lee wrote the first web browser (WorldWideWeb), web editor and a separate web server</p>
+
+<p>Static pages of text with inks between them (Hypermedia)</p>
+
+<p>Invented 3 technologies</p>
+
+<ul>
+  <li>Uniform Resource Locator (URL)</li>
+  <li>Hypertext Markup Language (HTML)</li>
+  <li>HyperText Transfer Protocol (HTTP)</li>
+</ul>
+
+<h1 id="web-vs-desktop-applications">Web vs Desktop Applications</h1>
+
+<h2 id="web-advantages">Web advantages</h2>
+
+<ul>
+  <li>Accessible form any internet enabled computer</li>
+  <li>Usable with different operating systems</li>
+  <li>Easier to roll out program updates</li>
+  <li>Fewer security issues with local storage</li>
+</ul>
+
+<h2 id="web-disadvantages">Web disadvantages</h2>
+<ul>
+  <li>Need an internet connection</li>
+  <li>Data is transmitted over the internet</li>
+  <li>Issues over storage licencing use od data</li>
+  <li>Websites many not have identical appearance across browsers</li>
+  <li>Restrictions to OS resources</li>
+  <li>Possible interference form additional plugins</li>
+</ul>
+<h1 id="web-servers">Web Servers</h1>
+       
+        <h1 id="static-websites-vs-dynamic-websites">Static Websites vs Dynamic Websites</h1>
+
+<h2 id="static-websites">Static Websites</h2>
+
+<p>The user makes a page request the sever runs a script and returns the requested page to the user as fixed HTML.</p>
+
+<h2 id="dynamic-websites">Dynamic Websites</h2>
+
+<p><strong>Processing occurs on the clients machine</strong></p>
+
+<p>The user makes a page request the sever runs a script and returns the requested page to the user as HTML and JavaScript.</p>
+
+<p>The JavaScript then may make additional requests to the server and updates
+the web page accordingly.</p>
+
+<h1 id="client-server-model">Client Server Model</h1>
+
+<h2 id="client-server-model-1">Client Server Model</h2>
+
+<p>The client requests data from a server that then then responds</p>
+
+<h2 id="peer-to-peer">Peer to Peer</h2>
+
+<p>Devices are both requesting an serving data concurrently</p>
+
+<h1 id="data-centers">Data Centers</h1>
+
+<h2 id="servers">Servers</h2>
+
+<p>Server’s can have many different uses</p>
+
+<ul>
+  <li>Web</li>
+  <li>Application</li>
+  <li>Database</li>
+  <li>Mail</li>
+  <li>Media</li>
+  <li>Authentication</li>
+</ul>
+
+<h2 id="support-hardware">Support Hardware</h2>
+
+<p>Data centers contain hardware to support and maintain the servers:</p>
+
+<ul>
+  <li>Server racks</li>
+  <li>Backup servers</li>
+  <li>Air conditioning</li>
+  <li>Backup generators</li>
+  <li>UPS (uninterruptible power supply (Batteries))</li>
+</ul>
+
+<h2 id="data-duplication">Data Duplication</h2>
+
+<p>In data centers data is duplicated so that if a server breaks then another
+server can take over and continue to provide the data</p>
+
+<h1 id="the-internet">The Internet</h1>
+
+<h2 id="communication">Communication</h2>
+<p>The majority of data traves through wires and cables.</p>
+
+<p>Undersea cables are the primary way for continental communication</p>
+
+<p>Satellites and other communication methods may be used but this is generally rare.</p>
+
+<h2 id="data-locality">Data Locality</h2>
+<p>Generally the shortest path is used to obtain data if data is in the UK requests and information typically will not leave the country. If the data is in America then a request will be mad to America. The shortest path is not guaranteed as the internet is a web many different paths exist.</p>
+
+<h2 id="packets">Packets</h2>
+
+<p>Packet’s are addressed and then routed to the correct location. Packets are transmitted across many computers on the way to the destination</p>
+
+<h2 id="routing">Routing</h2>
+
+<p>Routing involves checking if the destination is known to a computer and then directing the traffic in the correct location, if the location is not known then another computer higher up the chain is asked.</p>
+
+<h1 id="mobile-web-applications">Mobile Web applications</h1>
+
+<p>Phone and tablets have many constraints</p>
+<ul>
+  <li>Lacks hover</li>
+  <li>Lack processing power</li>
+  <li>Lack screen sizes</li>
+  <li>Variety of screen sizes</li>
+</ul>
+
+<p>However rather than having a dedicated web app browser apps can be made 
+to run in small browsers on the phone and websites can be converted over.</p>
+<h1 id="get-and-post">GET and POST</h1>
+       
+        <h1 id="get">GET</h1>
+<p>A get request is a more simple request with a combination of variables and values</p>
+
+<p><code class="language-plaintext highlighter-rouge">GET /process.php?title=Central+Park&amp;where=United+States http/1.1</code></p>
+
+<p>this has the values in the query string of</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">title=Central Park</code></li>
+  <li><code class="language-plaintext highlighter-rouge">where=United States</code></li>
+</ul>
+
+<p>is from 
+<code class="language-plaintext highlighter-rouge">&lt;form action="get" action = "process.php"&gt;</code></p>
+
+<p>This is also found in the url box in browsers
+<code class="language-plaintext highlighter-rouge">https://www.bbc.co.uk/search?q=cs139&amp;page=1</code></p>
+
+<p>this has the values in the query string of</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">q=cs1391</code></li>
+  <li><code class="language-plaintext highlighter-rouge">page=1</code></li>
+</ul>
+
+<p>The query sting is limited to 2048 characters</p>
+
+<p>Typically used to request specific data from the server</p>
+<h2 id="response">Response</h2>
+<p>Responds with 3 sections</p>
+<ul>
+  <li><strong>Header</strong> - status fo the request</li>
+  <li><strong>Body</strong> - (optional) response to the request</li>
+</ul>
+
+<p>Response codes</p>
+
+<ul>
+  <li><strong>2##</strong> codes for successful response</li>
+  <li><strong>3##</strong> redirection response</li>
+  <li><strong>4##</strong> codes for client errors e.g bad request</li>
+  <li><strong>5##</strong> codes for server errors</li>
+</ul>
+
+<p>Common codes</p>
+
+<ul>
+  <li><strong>200</strong> Ok</li>
+  <li><strong>301</strong> Moved Permanently</li>
+  <li><strong>304</strong> Not Modified</li>
+  <li><strong>307</strong> Temporary redirect</li>
+  <li><strong>400</strong> Bad request</li>
+  <li><strong>401</strong> Unauthorized</li>
+  <li><strong>404</strong> Not found</li>
+  <li><strong>414</strong> Request URI too long</li>
+  <li><strong>500</strong> InternalServer Error</li>
+</ul>
+
+<h1 id="post">POST</h1>
+<p>This request is encoded within the header for the request the query string can can’t be seen within the URL browser</p>
+
+<p>Has a longer Data allowance</p>
+
+<p>Typically used to send data to the server forms etc.</p>
+<h1 id="web-protocols">Web Protocols</h1>
+       
+        <h1 id="protocols">Protocols</h1>
+<p>A communication Standard so that computers can transfer data and instructions accurately.</p>
+
+<h1 id="network-layers">Network Layers</h1>
+<p>There are 4 (in this course) Network layers each have different protocols and are responsible for parts of data transmission.</p>
+<h2 id="application-layer">Application Layer</h2>
+
+<p>Many protocols</p>
+<ul>
+  <li><strong>HTTP</strong> Hypertext Transfer Protocol used for web communication</li>
+  <li><strong>FTP</strong>  File Transfer Protocol used for transferring files</li>
+  <li><strong>POP/IMAP/SMTP</strong> Email protocols for transferring and storing email</li>
+  <li><strong>DNS</strong> Domain name service for resolving domain names to IP addresses</li>
+</ul>
+
+<h3 id="http">HTTP</h3>
+<p>An Application Protocol for hypermedia information</p>
+
+<p>standard response request</p>
+
+<p>Development by Internet Engineering Task Force (IETF) and World Wide Web Consortium (W3C)</p>
+
+<h2 id="transport-layer">Transport Layer</h2>
+<p>Ensures Transmissions arrive in order an without error</p>
+<ul>
+  <li>TCP</li>
+  <li>UDP</li>
+</ul>
+
+<h2 id="internet-layer">Internet Layer</h2>
+<p>Establishes connection, routing and addressing</p>
+<ul>
+  <li>IPV4</li>
+  <li>IPV6
+An IP address is needed by every computer on the internet</li>
+</ul>
+
+<h3 id="ipv4">IPV4</h3>
+
+<p>Uses 4x8-bit numbers so 4,294,967,296 addresses
+they are now gone.</p>
+
+<blockquote>
+  <p>Reserved Addresses</p>
+  <ul>
+    <li>127.0.0.1 - LocalHost (the computer itself)</li>
+    <li>192.168.*.* - Private Networks</li>
+    <li>10.0.*.* - Private Networks</li>
+  </ul>
+
+  <p>There are other reserved addresses</p>
+</blockquote>
+
+<h4 id="nat-network-address-translation">NAT Network Address Translation</h4>
+<p>Used in part to overcome the shortage of IPV4 addresses</p>
+
+<ul>
+  <li>A device connects to a router</li>
+  <li>The router opens a port and</li>
+  <li>The router connects to the external resource</li>
+  <li>Data is passed through the router to the device</li>
+</ul>
+
+<p>The port number is added to the end of an Ip address
+e.g <code class="language-plaintext highlighter-rouge">213.31.218.101:5001</code> is port <code class="language-plaintext highlighter-rouge">5001</code> at address <code class="language-plaintext highlighter-rouge">213.31.218.101</code></p>
+
+<p>A single IP address is need for the router all of the internal computers use 
+one of the reserved addresses for private networks</p>
+
+<h3 id="ipv6">IPV6</h3>
+
+<p>Uses 8x16-bit numbers 340 undecillion numbers (a lot)</p>
+<h2 id="link-layer">Link Layer</h2>
+<p>Responsible for transmission of raw bits
+*MAC</p>
+
+<h1 id="domain-name">Domain Name</h1>
+<p>DNS Domain Name system acts an a contact list for servers</p>
+
+<p>Translates Human readable Name to IP addresses</p>
+
+<p>Hierarchical distributed naming system</p>
+
+<p>The Domain Name is Linked to an IP address, e.g <code class="language-plaintext highlighter-rouge">www.google.com</code> would be given an ip address that can be used to communicate with the servers</p>
+
+<p>can be broken down</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Server1.</code> -  Fourth level</li>
+  <li><code class="language-plaintext highlighter-rouge">www.</code>     - Third-Level</li>
+  <li><code class="language-plaintext highlighter-rouge">FunCode.</code> - Second Level</li>
+  <li><code class="language-plaintext highlighter-rouge">com</code>      - Top-Level Domain (TLD)</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">Server1.www.FunCode.com</code></p>
+
+<p>A tree of domain Names are created.</p>
+
+<p>Root Zone (TLD) is controlled by the Internet Assigned Numbers Authority (IANA)</p>
+
+<p>Different registrars assign domain names beneath this</p>
+
+<p>Registrars check with interNIC for the names</p>
+
+<p>Domain names are case insensitive</p>
+
+<h2 id="resolving-a-domain-name">Resolving A Domain Name</h2>
+<p>Default Base</p>
+
+<p>When connecting to a network the computer is given a DNS server (root)</p>
+
+<p>When Resolving a domain name</p>
+<ul>
+  <li>The computer asks the root server</li>
+  <li>The root server provides the top level domain</li>
+  <li>The top level domain which provides a sub domain server</li>
+  <li>Repeat until the address is found</li>
+</ul>
+
+<h3 id="caching">Caching</h3>
+<p>The previous steps are extensive so DNS caching is used.</p>
+<ul>
+  <li>The computer points to a caching server</li>
+  <li>The caching server checks if it has the address in memory
+    <ul>
+      <li>If it does return the memory</li>
+      <li>If not perform the other steps</li>
+    </ul>
+  </li>
+  <li>Any requests are saved to memory for next time.</li>
+</ul>
+
+<p>DNS records have a TTL (time to live) which dictates how ling they are valid for</p>
+
+<h1 id="url">URL</h1>
+
+<p>Made form several steps
+Name | Example
+–|–
+Protocol| http
+Domain| www.FunCode.com
+Path | index.php
+Query String | page=17
+Fragment | article</p>
+
+<p><code class="language-plaintext highlighter-rouge">http://www.FunCode.com/index.php?page=17#article</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">ftp://example.com/abc.txt</code> -&gt; sends an FTP request on port 21
+<code class="language-plaintext highlighter-rouge">http://example.com/abc.txt</code> -&gt; sends an HTTP request on port 80</p>
+
+<p>No guarantee of a response</p>
+
+<h2 id="path">Path</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A request requests a file the path specifies the file
+
+/ is the root folder for the webserver
+
+if a file is not specified one is usually selected usually index.html
+
+path is case sensitive
+</code></pre></div></div>
+
+<h2 id="query-string-">Query String :</h2>
+<p><a href="Theory3.html">SEE GET</a></p>
+
+<h2 id="fragment">Fragment</h2>
+
+<p>Requests a portion of a page.</p>
+
+<p>Browser will usually jump to the location in the page</p>
+
+<h1 id="web-browsers-servers-and-state">Web Browsers, servers and state</h1>
+       
+        <h1 id="web-browsers">Web Browsers</h1>
+<p>Web browsers interprets data into one in a recognized form</p>
+
+<p>Converting HTML page and rendering as a readable web page</p>
+
+<p>Each browser behaved differently and <strong>loosely</strong> conform to standards</p>
+
+<p>Each page makes multiple requests</p>
+
+<p>Local caching can reduce load times</p>
+
+<p>Most offer additional features, Search engine auto complete etc…</p>
+
+<h1 id="web-servers">Web Servers</h1>
+
+<p>Typically powerful computer to respond to HTTP requests.</p>
+
+<p>Often running NGINX or Apache</p>
+
+<p>Also contains</p>
+<ul>
+  <li>Operating System (Linux, Windows….)</li>
+  <li>Database Software (MySQL , MongoDB)</li>
+  <li>Scripting Language (PHP, python..)</li>
+</ul>
+
+<h1 id="state">State</h1>
+<p>HTTP is a state-less protocol , in a local process the computer only knowns about current memory and instructions</p>
+
+<p>The Server treats every request as a completely new request</p>
+
+<p>Many servers can be responding to many users making it hard to store data.</p>
+
+<p>Rest is used to transfer the current state of the communication between the client and the server. Most common operations are GET and POST</p>
+
+<h2 id="solutions">Solutions</h2>
+<p>there are 3 solutions to store state across requests</p>
+
+<h3 id="query-strings">Query Strings</h3>
+<p>limited to 2048 on a get Request
+A simple store of variables and names</p>
+
+<p>Typically used for requesting Data from a server</p>
+
+<p>Can alow for more dynamic URLS by having a more unique query string that can 
+be more easily interpreted</p>
+
+<h3 id="cookies">Cookies</h3>
+
+<p>Data unique to the client is created by the server</p>
+
+<p>The cookie is sent to the client when the first request is made</p>
+
+<p>The client includes the cookie in subsequent requests</p>
+
+<p>Cookies can expire - Server sets this</p>
+
+<h3 id="sessions">Sessions</h3>
+
+<p>Store state like cookies but just for the time the user is active with the site</p>
+
+<h1 id="security">Security</h1>
+       
+        <h1 id="hashing-algorithms">Hashing Algorithms</h1>
+
+<ul>
+  <li><strong>md5</strong> - easily calculated but clashes have been found</li>
+  <li><strong>sha1</strong> - (160 bits) easily calculated</li>
+  <li><strong>Bcrypt</strong> - current best recommendation</li>
+</ul>
+
+<p>Passwords are still susceptible to dictionary attacks</p>
+
+<p>Passwords should be unique when stored</p>
+
+<h2 id="salt">Salt</h2>
+<p>a salt is a random value for each user and is included when checking the password. Can be stored alongside the password in the database.</p>
+
+<ul>
+  <li>11:11:23 + “Password” =&gt; asdfkjh67fasf69d8f6aadf4w8…..</li>
+  <li>22:21:23 + “Password” =&gt; flkafj948rj9fjsd9cnyrur94jrf….</li>
+</ul>
+
+<p>harder to crack many passwords
+only needed for SHA1 php <code class="language-plaintext highlighter-rouge">password_hash</code> adds salt automatically</p>
+
+<h1 id="redirect">Redirect</h1>
+<p>When submitting a from the page should redirect to a confirmation page to prevent re entry , and prevent re-submit through refreshing the page. causing a double submit.</p>
+
+<h1 id="query-strings">Query Strings</h1>
+<p>Query strings can be modified by the user
+and should be checked for validity nothing should be assumed</p>
+
+<p>known as sanitizing / validating input</p>
+
+<h1 id="https">HTTPS</h1>
+
+<p>Https is a protocol for secure communication over a network, built on the SSL/TLS protocol.</p>
+
+<p>the HTTP is encrypted but is not changed.</p>
+
+<p>HTTPS should be used for all sensitive data.</p>
+
+<p>Now all services opt for HTTPS and HTTP is rarely used.</p>
+
+<h2 id="operation">Operation</h2>
+
+<ol>
+  <li>The client sends a list specifications to the server
+    <ul>
+      <li>what SSL/TLS version it is running</li>
+      <li>What ciphersuits it wants to use</li>
+      <li>What compression methods it wants to use</li>
+    </ul>
+  </li>
+  <li>The server selects the highest SSL/TLS version and agrees on ciphersuits and compression</li>
+  <li>The server sends a certificate to the client which must
+    <ul>
+      <li>be trusted by the client explicitly</li>
+      <li>be signed by a party the client trusts</li>
+    </ul>
+  </li>
+  <li>The server has also sends an asymmetric key continued with the certificate</li>
+  <li>The client and server setup symmetric key encryption</li>
+  <li>All communication is then encrypted</li>
+  <li>The server then verifies the MAC
+    <h3 id="public-key">Public Key</h3>
+    <p>These are the keys that are used to encrypt data asymmetrically.
+They are distributed with a certificate signed by a certificate authority.</p>
+    <h3 id="certificate-authority">Certificate Authority</h3>
+    <p>These are 3rd parties and the public keys are installed with OS/ browser establishing trust and sign certificates to verify identity.</p>
+  </li>
+</ol>
+
+<p>Signatures can be compared with the public key to ensure identity.</p>
+
+<p>Issuing a certificate is done when a domain registrant can prove they own the domain</p>
+
+<h2 id="drawbacks">Drawbacks</h2>
+<p>Encryption algorithms can be computationally intensive</p>
+
+<p>Dedicated and faster hardware generally now makes this negligible</p>
+
+<h2 id="man-in-the-middle">Man in the Middle</h2>
+<p>a machine sits in the middle and read the messages</p>
+
+<p>even if keys are transmitted fake keys can be made can can be decrypted in the middle</p>
+
+<p>By signing certificated fake keys cannot be made</p>
+
+<h1 id="sql-injection">SQL Injection</h1>
+<p>Transmitting SQL strings to modify the database request</p>
+
+<p>Consider the defaut request
+<code class="language-plaintext highlighter-rouge">"SELECT * FROM users WHERE name ='"+UserName+"';"</code></p>
+
+<p>By adding ``or ‘1’=1` to a username entry box
+the query becomes</p>
+
+<p><code class="language-plaintext highlighter-rouge">"SELECT * FROM users WHERE name = '' or '1'=1;"</code></p>
+
+<p>this would return all users from the database</p>
+
+<p>Other issues could be destroying databases or modifying entries.</p>
+
+<h2 id="prevention">Prevention</h2>
+<p>The use of parameterized statements that has placeholder values where the data can be added later</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$stmt</span><span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="nf">prepare</span><span class="p">(</span><span class="s2">"Select bar FORM foo WHERE id=;id"</span><span class="p">);</span>
+<span class="nv">$stmt</span><span class="o">-&gt;</span><span class="nf">bindValue</span><span class="p">(</span><span class="s2">";id"</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="no">SQLITE3_INTEGER</span><span class="p">);</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$stmt</span><span class="o">-&gt;</span> <span class="nf">execute</span><span class="p">();</span>
+</code></pre></div></div>
+<p>This treats all data as data and never as instructions.</p>
+
+<p>Alternatively <code class="language-plaintext highlighter-rouge">addslashes()</code> can be used to escape any characters but is not a preferred method</p>
+
+<p>Other additional ensures can be database access management such as limits on deletion</p>
+
+<h1 id="session-sniffing">Session Sniffing</h1>
+<p>An attacker observers communication between a server and a victim , Cookies and session data could be reconstructed which could then be used to impersonate the victim.</p>
+
+<h1 id="session-fixation">Session Fixation</h1>
+<p>An attacker obtains a session ID form the server
+The attacker then forces the session id of the victim to be identical to theirs
+The victim logs on, the attacker can then use their session id</p>
+
+<h1 id="xss">XSS</h1>
+<p>Cross Site scripting, Injects client script into webpages</p>
+
+<p>Accounts for 84% of all security Vulnerabilities documents by Symantec in 2007</p>
+
+<p>Non-Persistent data is provided by a client and is used by a server without proper sanitization. The content is uploaded back to the page could be provided by clicking in a link like a GET request</p>
+
+<p>consider</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$name</span> <span class="o">=</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'name'</span><span class="p">];</span>
+<span class="k">echo</span> <span class="s2">"Hi </span><span class="nv">$name</span><span class="s2">!"</span><span class="p">;</span>
+</code></pre></div></div>
+<p>the user gould be given a link with HTTP / javascript as name the javascript would then be run by the browser.</p>
+
+<p>this should be avoided by filtering</p>
+
+<p><code class="language-plaintext highlighter-rouge">$name= filter_input(INPUT_GET,'name',FILTER_SANITIZE_STRING);</code></p>
+
+<p>and output should be escaped</p>
+
+<pre><code class="language-PHP">$name= filter_input(INPUT_GET,'name',FILTER_SANITIZE_STRING);
+echo 'Hi '.htmlspecialchars($name,ENT_COMPAT,'UTF-8')
+</code></pre>
+
+<p>The recommendation is to store the data in as raw form as possible and only convert when it is time to output it.</p>
+
+<h2 id="persistent-xss">Persistent-XSS</h2>
+<p>When data is stored to a database then redisplayed later for a user, e.g a comment.</p>
+
+<p>All data should be escaped.</p>
+
+<h1 id="directory-traversal">Directory traversal</h1>
+
+<p>A user many insert a path outside the web</p>
+
+<p>Restrict access to only some directories (whitelisting)</p>
+
+<p>Convert paths to absolute and ensure they are in the correct directory</p>
+
+<h1 id="php-cgi-vulnerabilities">PHP-CGI Vulnerabilities</h1>
+
+<p>PHP-CGI  had the option to server the php source</p>
+
+<p>another option allows the setting of variables this could allow variable and variable manipulation this should be disable d in sever settings</p>
+
+<h2 id="other-configuration-advice">Other Configuration Advice</h2>
+<p><code class="language-plaintext highlighter-rouge">allow_url_fopen</code> - indicates wether remote files can be downloaded
+                    should be off</p>
+
+<p><code class="language-plaintext highlighter-rouge">allow_url_include</code> - indicated wether scripts can include/ require remote files
+turn off if not needed</p>
+
+<br/>
+            <hr style="
+                padding: 5px;
+                border-radius: 1em;
+                background-color: whitesmoke;
+            ">
+            <br/><h1 id="designing-for-mobile">Designing For Mobile</h1>
+       
+        # Mobile Sites
+
+Large amount of mobile web traffic over the past few years
+
+Different interface
+* smaller screens
+* Touch Based Interaction
+
+Two techniques
+* Responsive Web design
+* Separate mobile platforms
+
+## Responsive Web Design
+using an advanced css feature is `media`
+
+CAn be used to access the device
+* Height/ width of Window
+* Height/ width of device
+* Orientation - landscape / portrait
+* Resolution
+
+`media` can be used
+* In the CSS files
+* To add different css files in the head element
+
+Adding to the CSS file example
+
+``` css
+@media only screen and (max-device-width: 480px){
+    div#Wrapper {
+        width: 400px
+    }
+    #navigation {
+        float: none;
+        width: auto;
+    }
+}
+```
+These are applied only to screens smaller than 480px wide
+
+These also override any other styles specified elsewhere
+
+Easier then rewriting pages
+
+## Separate Mobile Layout
+Previously common not so anymore
+
+Redirects can be done based on the browsers user agent based in the header
+
+can access the user agent against `$_SERVER["HTTP_USER_AGENT"]`
+
+however needs updating as new devices come out
+
+* Pros
+    * Easy to create fixed views
+    * Hard to dynamically cater to all screen sizes
+* Cons
+    * Many not work if new devices are created
+    * Can be a lot of work to double the number of pages
+    * Two sets of pages need updating
+
+# Best?
+Each has its merits
+
+Some content can work best with different designs
+<br/>
+            <hr style="
+                padding: 5px;
+                border-radius: 1em;
+                background-color: whitesmoke;
+            ">
+            <br/><h1 id="being-a-web-developer">Being A Web Developer</h1>
+       
+        # Development
+
+## Testing checklist
+
+* Functional Testing
+    * Test all pages for errors
+    * Test all forms
+        * Check the results
+        * Check that validation is working correctly
+* Usability Testing
+    * Is navigation easy
+    * Is the content correct
+    * Links to help docs
+* Compatibility Testing
+    * Across browsers
+        * Chrome
+        * Firefox
+        * Safari
+        * ...
+    * Mobile Devices
+    * What happens on unsupported browsers?
+* Performance Testing
+    * How fast is the application?
+    * Can the site be optimized?
+        * Caching data/ assets
+        * More Efficient queries
+* Security Testing
+    * SQL , XSS injection attacks
+    * Update policy
+    * Software stack, correct settings, updated software etc...
+
+## Test Driven Development
+
+Writing code to satisfy tests
+
+Should know what your code need to do before it is written
+
+Write the test before writing the code
+
+* Red
+    * Write a failing test, should stat what needs to happen
+* Green
+    * Code Meeds the test
+* Refactor
+    * Make the code safe, secure and beautiful
+
+Run Test frequently 
+
+Tests can be run automatically on submission to the central repository
+
+# Modern Web
+Not always written in PHP
+
+Facebook use a PHP -> C++ compiler for performance reasons
+
+PHP Frameworks can do the heavy lifting
+
+Other language
+* Ruby on rails
+* Scala
+* Play Framework
+
+Many Technologies are combined to build a web application
+
+## Ruby
+* General purpose
+* OOP and functional styles are supported
+* Large software library
+## Rails
+Collection of libraries that work together
+* __Active Record__ - Object relational mapping for database entities
+* __ActiveResource__ - For web services
+* __ActionMailer__ - Manages Email Functionality
+* __ActionPack__ - Manages mapping URLs to correct applications
+
+# Front end
+
+some tips 
+* Learn photoshop for simple mockups
+* Learn ins/outs of Javascript
+* Find out about browser inconsistencies
+
+## Frameworks
+* Javascript
+    * Angular.js
+    * React.js
+    * Vue.js
+* Other
+    * Django (Python)
+    * Flask  (Python)
+
+## CSS
+Css can be difficult
+
+Sass extends css syntax to offer nested rules, named variables , mixins
+
+This then compiles down to css
+
+# Back End
+tips
+* Looks at you language / framework handles background jobs
+* Look at cloud based storage
+* Ensure you can use web services
+* Work out how to do proper performance testing
+* Learn about the software stack<br/>
+            <hr style="
+                padding: 5px;
+                border-radius: 1em;
+                background-color: whitesmoke;
+            ">
+            <br/><h1 id="setting-up-a-real-website">Setting up a Real Website</h1>
+       
+        # Deploying Applications
+
+## Registering a Domain Name
+* Make it memorable
+* Shorter is better
+* Most registrars charge £10 - £12 per year
+
+## Server for Applications
+* use a small computer you own
+* Use a shard host with the domain registrar of Platform as a service
+    * Advantages
+        * Server is preconfigured
+        * Simple to use
+    * Disadvantages
+        * Large cost as scale 
+        * Limited control over software stack
+        * May not be able to run certain messages e.g Message Queues
+* Use a cloud based virtual server
+    * Advantages
+        * Can have fill control over the software stack
+        * Cheap to run
+    * Disadvantages
+        * Security can be your problem
+        * Limited Hardware
+* Buy a server and find a data centre
+    * Advantages
+        * Free Hardware choice
+        * Full software choice
+    * Disadvantages
+        * Security
+        * Cost
+* Build you own data centre
+    * Disadvantages
+        * Expensive
+
+## Software Stack Choices
+Database options include
+* mySQL
+* PostgreSQL
+
+Many different versions __Don't use SQLite3__
+
+Webserver Apache / nginx are both good choices
+
+## Configuring the System
+After the OS is installed the software stack can be installed form the source or with a package manager
+
+1. Install apache `apt-get install apache2`
+2. Setup the virtual `host file in /etc/apache2/sites-available/example.com`
+3. Create the directories `/srv/www/example.com/public_html` and `logs`
+4. Enable the sire `a2ensite example.com`
+5. Reload apache `service apache reload`
+
+Installing mysql
+
+1. `apt-get install mysql-server`
+2. Secure the basic installation `mysql_secure_installation`
+3. Start a database session `mysql -u root -p`
+4. Create a user for the application
+5. Create a database for you application
+6. Grant privileges for your application
+
+Installing PHP
+
+1. `apt-get install php8.0 php8.0-mysql`
+2. restart apache `service apache2 reload`
+
+Additional Software
+1. __Imagemagik__ - Manipulating uploaded images
+2. __sendmail__ - Acts as a mail server
+3. __logrotate__ - To rotate the log files and delete old ones
+
+## Updating the DNS
+1. Got to the registrar and register the IP address with the Domain Name
+2. Add a record for `www.` which points to the server
+3. Save changes
+4. It can take some time for any changes to propagate
+
+## Securing the Server
+As a minimum always
+* Install `fail2ban` blocks ssh users form an IP for failed logins
+* Configure the firewall to only accept SSH and HTTP(s) traffic
+* Modify SSH to only accept key based logins from non designated IPs
+
+## Maintenance
+* Keep an eye on the server
+* Need to install monitoring Software to alert you to issues
+* Check logs on a daily basis
+    * Setup an email script
+* Monitor usage to ensure everyone can use the site
+<h1 id="xml-and-json">XML and JSON</h1>
+       
+        ## XML
+Extensible MArkup language
+Similar to HTML
+
+Human and machine readable
+
+emphasis's simplicity  generality and usability
+
+Textual data format
+
+RSS, Atom SOAP are all XML formatted
+
+An XML Element is everything from the start tag to the end tag
+
+XML element is everything form the start tot he end tag
+
+No standard for names aside form the software creating and interpreting the data
+
+* __Structure__ - Defining appropriate tag names
+* __Content__ - The data contained within the structure
+
+
+Element may contain
+    Other Elements
+    test
+    attributes
+
+an Example Food Menu:
+``` XML
+<menu>
+    <food>
+        <name> Pizza <name>
+        <price currency="£"> 50.00 </price>
+    </food>
+    <food>
+        <name> Pasta <name>
+        <price currency="£"> 25.00 </price>
+    </food>
+    <drink>
+        <name> Red Wine <name>
+        <price currency="£"> 20.00 <price>
+        <volume unit="cl"> 200 </volume>
+    </drink>
+</menu>
+```
+### Valid Names
+* Can contain Letter, Numbers, and other characters
+Names cannot
+* Start with a number or punctuation
+* Start with the letters XML (case insensitive)
+* Cannot contain spaces
+
+### Attributes
+Attributes provide additional information about the data
+
+They may contain metadata , such as software used to create the XML
+
+Can be used to help parse the data
+
+### Well Formed
+XML is well formed if ti meets the following requirements
+* The document contains only unicode characters
+* None of the special characters appear (e.g < and &)
+* Begin, end and empty tags are correctly nested
+* Element tags are case-sensitive
+* A single root element contains all the other elements
+
+
+# JSON
+Javascript Object Notation
+
+XML can be too clunky needed creating and parsing 
+
+JSON is smaller and can more easily be converted
+
+JSON is less human readable than XML
+
+Data amy or may not exit for example if there are no ratings for a product the
+rating data may be empty under some structures an null under others is is important to check that the variables exist if this is the case.
+
+## Data Types
+* Number
+* String
+* Boolean
+* Array
+* Object (Collection of Key Value Pairs)
+* null (empty)
+
+## Syntax
+* Data is in Key,value pairs
+* Data is comma seperated
+* `{ }` hold objects
+* `[ ]` hold arrays
+* Whitespace is not relevant can make it more readable
+
+## Example
+``` JSON
+{
+    "Food" : [
+        {
+            "Name" : "Pizza",
+            "Price" : 50.00
+        },
+        {
+            "Name" : "Pasta",
+            "Price" : 25.00
+        }
+    ]
+    ,
+    "Drink" : [        
+        {
+            "Name" : "Red Wine",
+            "Price" : 20.00,
+            "volume" : 200
+        }
+    ]
+}
+
+```
+## conversion
+
+* `JSON.parse()` Create an object form a json string
+* `JSON.stringify()` Create a json string from an object 
+ <br/>
+            <hr style="
+                padding: 5px;
+                border-radius: 1em;
+                background-color: whitesmoke;
+            ">
+            <br/><h1 id="usability">Usability</h1>
+       
+        Usability is Money
+
+Users will have a poor experience and they won't use the site again 
+
+Should consider usability for all users not just the developer 
+
+## Rules of Interaction Design
+
+* Understand the Computer - Limitations, capacities tools and platforms
+* Understand People - Phycology, social aspects and human error
+* Understand Human Error - Human Error is common
+
+An unclear interface is often blamed on user error when it is actually designer error
+
+User centered design
+1. Put the user first
+2. Keep the user in the centre
+2. Remember the user at the end
+
+# Software Development Lifecycle
+1. Requirements capture
+2. Design
+3. implementation
+4. Verification
+5. Maintenance
+
+## Requirements Capture 
+
+### Elicitation
+work with the stakeholder
+Interviews and Questionnaires - ask users
+Ethnography - observe users
+Scenarios & stories - real life examples
+
+### Types of Requirements
+* Functional
+    * A service provided by the system
+    * What it should not do
+* Non Functional
+    * Constrains on the functions
+    * can affect the whole system
+
+### Specification
+What the system does not how it does it
+
+Describe using:
+* Natural Language - easy for anyone
+* Structured Language - pseudoscope
+* graphical notation - paper prototypes
+    * Cheap and easy to create
+    * easy to edit
+* Design language - Cant be used by everyone
+* Mathematical specification - very precise
+
+# Usability
+* Learn-ability - How easy it to accomplish basic tasks on first encounter
+* Efficiency - Once users have performed the design, how quicly can they perform tasks?
+* Memorability - When users return to the interface how easily can they use it again
+* Errors - How many, What are they , Are they recoverable
+* Satisfaction - How pleasant is the design 
+
+## Visibility
+How easy is it for the user to recognize and use a control function. A more visible function is easier to use. Position of the controls and what they do is also important 
+
+## Affordance
+Properties of an object, what can be done with it.
+
+When you first see something how do you know what to do with it?
+* Text
+* Icons
+* Instructions
+
+Don't make non-working buttons or things that don't look like buttons
+
+## Constraints
+Limiting the cations the user can take at any one time
+
+Common is deactivating certain menu options by shading and restricting use
+
+* __Physical__ - DVDs , USB, Keyboard : can only be pressed
+* __Logical__ - The users understanding of how the world works and allows the user to deduce what happens next
+* __Cultural__ - Cultural conventions: A red light means stop / warning almost anywhere it is shown in the western world but in China celebrates new year and brings good luck. This is a result of culture and fairly arbitrary not any form of logical process. 
+
+## Feedback
+Gives the user a response to an action and what has been accomplished could be
+* __Visual__ - hourGlass , new page load
+* __Auditory__ - Beep on mistake
+* __Tactile__ - Keyboard , vibration
+* __Verbal__ - Warnings or welcome messages
+
+## Mapping 
+Relationship between the controls and their effect
+
+__Good__ - Steering Wheels, Slider Bars
+
+__Poor__ - Taps: which side , Light switch: Which light?
+
+## Consistency 
+Similar operations for similar tasks
+
+Cut and pase in the same menu
+File Menu top left
+
+Similar both within systems and cross systems / applications (Xbox controller and PlayStation are similar)
+
+# Usability Heuristics
+* __Visibility of System Status__ - Keep users informed of status by providing feedback e.g 1/10 
+* __Match Between system and Real World__- Use user's language rather than systems terms
+* __User Control and Freedom__ = Provide "escape routes" for users (undo)
+* __Consistency and Standards__ - Avoid making users wonder if deferent terms mean the same thing (apply / save)
+* __Error prevention__ - Prevent users form making errors (Do you want to save)
+* __Recognition rather then recall__ - Make objects ,actions and objects visible
+* __Flexibility and Efficiency of use__ - Provide accelerators that allow experts to do things faster
+* __Aesthetic and Minimalist Design__ - Avoid irrelevant functions or information
+* __Help users recognize, diagnose and recover from error__ - Use Plain language to describe the error. Be informative and non-technical
+* __Help and Documentation__ - Provide information that is easily searched and provides solutions
+
+# Accessibility and the Web
+Inclusive practice of making websites usable for all abilities
+
+Required by Equality Act 2010
+* Meet level AA of the web content Accessibility Guidelines (WCAG 2.1)
+* Otherwise: you could be sued for discrimination
+
+The site should
+* Programed using semantically meaningful HTML
+* Has text equivalents for images
+* Meaningful link names
+
+## Needs
+__Visual__ - Blindness, poor vision , colour Blindness
+__Motor__ - Fine motor control , tremors, slowness
+__Auditory__ - Deafness
+__Seizures__ - Epilepsy form flashing lights
+__Cognitive__ - Learning difficulties (dyslexia,dyscalculia) memory problems
+
+## Examples
+* Making images/ text enlargeable with functionality or browser CSS
+* Underline Links - for colour blind people
+* Make clickable areas large - Helps users with poor motor control
+
+## Assistive Technologies
+* __Screen Reading Software__ - Reads to the user with synthesized speech
+* __Braille Terminals__ - Outputs text as Braille
+* __Screen Magnification__
+* __Speech Recognition__
+* __Large TrackBalls__
+
+## WCAG
+Web content accessibility Guidelines (WCAG) are published by the Web Accessibility initiative 
+WCAG 2.0 published in 2008 and became an ISO standard in 2012
+WCAG 2.1 published in 2018
+
+## Principles Behind the Quidlines
+* __Perceivable__ - Information should pe presented to users in ways they can perceive
+* __Operable__ - User interface components and navigation must be operable
+* __Understandable__ - Information and the operation of user interface must be understandable 
+* __Robust__ - Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.
+
+# Evaluation and Testing
+
+## Evaluation
+* Gather Data about the usability of the design
+    * what the user does
+    * The characteristics of the user
+    * The environment and the context where the evaluation will take place
+    * The nature of the artefact being examined
+
+Types of evaluation
+* __Formative Evaluation__ - Evaluation of an existing product, Predictive evaluation
+* __Summative Evaluation__ - Evaluation at the completion of a product
+
+Evaluation should be done regularly and after each step in the product design development and testing.
+
+## Analytical Evaluation
+Include Keystroke Model
+Measure
+* k (Key-stroking)
+* P (Pointing)
+* H (Homing)
+* D (Drawing)
+* M (Mental timing of the operator)
+* R (Response time fo the system)
+
+## Observational Evaluation
+* Observer users interacting with the system
+* Users complete a et of predetermined tasks
+* Users can be asked to "Think aloud" - give description of what they are doing and thinking about
+* Their thoughts are analysed later
+* Assess the extent of System functionality
+* Assess the effect of the interface on the user
+* Identify specific problems
+
+## Usability Testing
+* Introduce a list of tasks
+* Watch Quietly
+* Record behavior (take notes, recorded)
+
+## Measuring Usability
+* Ratio of successes to failures
+* Time to compete a task
+* Number of errors made
+* Number fo times the user expresses frustration
+
+
+
+<br/>
+            <hr style="
+                padding: 5px;
+                border-radius: 1em;
+                background-color: whitesmoke;
+            ">
+            <br/><h1 id="web-architectures-and-performance">Web Architectures and Performance</h1>
+       
+        # Three Tier Architecture
+* Web Tier
+    * Handles requests 
+    * Serves static assets
+    * (apache)
+* Application tier
+    * Application specific logic
+    * (PHP C++ C# ...)
+* Database Tier
+    * File storage
+    * (SQL MongoDB ...)
+
+
+# Scaling
+## Vertical Scaling
+An older way of scaling or for small companies
+
+If the older server is too small
+
+Buy a bigger server
+
+Fairly practical 
+    * can fit 3TB of RAM in a 1u server
+    * a Standard rack is 42u
+
+### Advantages
+* Can buy a small system now then expand later
+* Minimizes immediate capital expenditure
+
+### Disadvantages
+* Whole machine needs to be replaced to scale up
+* Replacing the machine leads to downtime
+* Harder to scale down
+
+## Horizontal Scaling
+Separate the database to a separate computer
+
+Multiple servers can be setup to communicate with the single database computer
+
+Load cam be spread across the servers
+
+Any requests are sorted by a __Load Balancer__ to ensure that all server are equally loaded
+
+Load balancing algorithms 
+* __Round Robin__ - requests sent to each server in turn
+* __Weighted round robin__ - Request sent to each server in turn but also determined by a weighting for each server
+* __Least active sessions__ - requests are sent to the most lightly loaded server
+### Advantages
+* The individual computers are cheaper
+* Built in redundancy if a server breaks the others can continue
+*  Easily add more servers
+
+### Disadvantages
+* Higher upfront costs
+* More complex systems, More Maintenance needed
+
+## Cloud Based Infrastructure
+Cloud computing can allow users to rent servers
+
+Servers can be leased by the hour
+
+Software can monitor changes and boot up / shutdown servers to scale with demand
+
+## Caches
+Results of heavy computation can be cached
+
+Calculations does nto need to be run again
+
+## Message Queues
+Applications hav long running tasks
+
+Warning can take a long time
+
+Applications can drop messages into the queue which are then processed by software which listen's to the queue
+
+
+# Measuring Performance
+There are different Metrics
+
+* End to End response time
+    * Time takes form issuing a request to receiving a response
+    * measures the application as the user sees it
+    * Needs to be done for each request type
+    * use JMeter, Apache BEnchmark , siege
+* Site Response time
+    * Time taken for the server to process a request
+* Request Throughput
+    * number of requests processed by the server per second
+* Test for concurrent users
+    * A test on user capacity
+
+__A system under load will perform differently to an idle system__
+
+When specifying performance percentiles are used as targets.
+
+    "95% of all requests should be processed in less than 5 seconds.
+    The maximum acceptable processing time is 60 seconds"
+
+Users expect a site ro be responsive.
+
+A poor experience will cause page abandonment. 
+
+## Throughput
+How many responses a system can service per unit time
+
+Range of requests
+
+Simulate possible user actions
+
+Each request represents a different proportion of application actions<br/>
+            <hr style="
+                padding: 5px;
+                border-radius: 1em;
+                background-color: whitesmoke;
+            ">
+            <br/>
+                
+                <footer class="site-footer">
+                    
+                    <span class="site-footer-owner"><a href="https://github.com/CSRG-Group/dcs-notes.github.io">dcs-notes.github.io</a> is maintained by <a href="https://github.com/CSRG-Group">CSRG-Group</a>.</span>
+                    
+                </footer>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

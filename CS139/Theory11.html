@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang=" en-US">
+
+<head>
+
+    
+    <meta charset="UTF-8"><script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- Include tocNAV javascript -->
+    <script type="text/javascript" src="/assets/js/tocNav.js"></script>
+
+    <!-- seo used to be here -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style"
+        type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>CS139 Being A Web Developer</title>
+</head>
+
+<body>
+    <div id="mainGrid" class="container">
+        <header style="padding:10px;" class="page-header notes-header" role="banner">
+            <h1 class="project-name">Being A Web Developer</h1>
+        </header>
+        <div title="Table of Contents" class="buttonCol" onclick="toggleNav()">
+            <div class="navArrow">
+                <i></i>
+            </div>
+        </div>
+        <div class="navBox">
+            <div id="sidenav" class="sideNav closedNav">
+                <h2 style="margin-left: 10px;">Table of Contents</h2><ul class="table-of-contents"><li><a href="#development">Development</a><ul><li><a href="#testing-checklist">Testing checklist</a></li><li><a href="#test-driven-development">Test Driven Development</a></li></ul></li><li><a href="#modern-web">Modern Web</a><ul><li><a href="#ruby">Ruby</a></li><li><a href="#rails">Rails</a></li></ul></li><li><a href="#front-end">Front end</a><ul><li><a href="#frameworks">Frameworks</a></li><li><a href="#css">CSS</a></li></ul></li><li><a href="#back-end">Back End</a></li></ul>
+</div>
+        </div>
+        
+        <div class="contents">
+            <main id="content" class="main-content" role="main">
+                <div class="partNav"><a href="/CS139/Theory10.html" title="Designing For Mobile">👈Prev</a><a href="./" title="CS139 Home">🏡CS139</a><a href="/CS139/Theory12.html" title="Setting up a Real Website">Next👉</a></div>
+                <!-- Main Content of markdown or sub-layouts-->
+                <!-- Each module has its own layout to allow module layouts to be customised -->
+<!-- The layout name is also used by the notes layout to display the correct module code -->
+
+<h1 id="development">Development</h1>
+
+<h2 id="testing-checklist">Testing checklist</h2>
+
+<ul>
+  <li>Functional Testing
+    <ul>
+      <li>Test all pages for errors</li>
+      <li>Test all forms
+        <ul>
+          <li>Check the results</li>
+          <li>Check that validation is working correctly</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Usability Testing
+    <ul>
+      <li>Is navigation easy</li>
+      <li>Is the content correct</li>
+      <li>Links to help docs</li>
+    </ul>
+  </li>
+  <li>Compatibility Testing
+    <ul>
+      <li>Across browsers
+        <ul>
+          <li>Chrome</li>
+          <li>Firefox</li>
+          <li>Safari</li>
+          <li>…</li>
+        </ul>
+      </li>
+      <li>Mobile Devices</li>
+      <li>What happens on unsupported browsers?</li>
+    </ul>
+  </li>
+  <li>Performance Testing
+    <ul>
+      <li>How fast is the application?</li>
+      <li>Can the site be optimized?
+        <ul>
+          <li>Caching data/ assets</li>
+          <li>More Efficient queries</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Security Testing
+    <ul>
+      <li>SQL , XSS injection attacks</li>
+      <li>Update policy</li>
+      <li>Software stack, correct settings, updated software etc…</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="test-driven-development">Test Driven Development</h2>
+
+<p>Writing code to satisfy tests</p>
+
+<p>Should know what your code need to do before it is written</p>
+
+<p>Write the test before writing the code</p>
+
+<ul>
+  <li>Red
+    <ul>
+      <li>Write a failing test, should stat what needs to happen</li>
+    </ul>
+  </li>
+  <li>Green
+    <ul>
+      <li>Code Meeds the test</li>
+    </ul>
+  </li>
+  <li>Refactor
+    <ul>
+      <li>Make the code safe, secure and beautiful</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Run Test frequently</p>
+
+<p>Tests can be run automatically on submission to the central repository</p>
+
+<h1 id="modern-web">Modern Web</h1>
+<p>Not always written in PHP</p>
+
+<p>Facebook use a PHP -&gt; C++ compiler for performance reasons</p>
+
+<p>PHP Frameworks can do the heavy lifting</p>
+
+<p>Other language</p>
+<ul>
+  <li>Ruby on rails</li>
+  <li>Scala</li>
+  <li>Play Framework</li>
+</ul>
+
+<p>Many Technologies are combined to build a web application</p>
+
+<h2 id="ruby">Ruby</h2>
+<ul>
+  <li>General purpose</li>
+  <li>OOP and functional styles are supported</li>
+  <li>Large software library
+    <h2 id="rails">Rails</h2>
+    <p>Collection of libraries that work together</p>
+  </li>
+  <li><strong>Active Record</strong> - Object relational mapping for database entities</li>
+  <li><strong>ActiveResource</strong> - For web services</li>
+  <li><strong>ActionMailer</strong> - Manages Email Functionality</li>
+  <li><strong>ActionPack</strong> - Manages mapping URLs to correct applications</li>
+</ul>
+
+<h1 id="front-end">Front end</h1>
+
+<p>some tips</p>
+<ul>
+  <li>Learn photoshop for simple mockups</li>
+  <li>Learn ins/outs of Javascript</li>
+  <li>Find out about browser inconsistencies</li>
+</ul>
+
+<h2 id="frameworks">Frameworks</h2>
+<ul>
+  <li>Javascript
+    <ul>
+      <li>Angular.js</li>
+      <li>React.js</li>
+      <li>Vue.js</li>
+    </ul>
+  </li>
+  <li>Other
+    <ul>
+      <li>Django (Python)</li>
+      <li>Flask  (Python)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="css">CSS</h2>
+<p>Css can be difficult</p>
+
+<p>Sass extends css syntax to offer nested rules, named variables , mixins</p>
+
+<p>This then compiles down to css</p>
+
+<h1 id="back-end">Back End</h1>
+<p>tips</p>
+<ul>
+  <li>Looks at you language / framework handles background jobs</li>
+  <li>Look at cloud based storage</li>
+  <li>Ensure you can use web services</li>
+  <li>Work out how to do proper performance testing</li>
+  <li>Learn about the software stack</li>
+</ul>
+
+                
+                <footer class="site-footer">
+                    
+                    <span class="site-footer-owner"><a href="https://github.com/CSRG-Group/dcs-notes.github.io">dcs-notes.github.io</a> is maintained by <a href="https://github.com/CSRG-Group">CSRG-Group</a>.</span>
+                    
+                </footer>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
